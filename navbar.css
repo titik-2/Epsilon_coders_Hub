@@ -1,0 +1,292 @@
+/* =========================
+   EPSILON NAVBAR
+========================= */
+
+.navbar {
+    background: rgba(11, 15, 23, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .25);
+    height: 75px;
+    padding: 0;
+    z-index: 999;
+}
+
+/* LOGO */
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    height: 75px;
+}
+
+.navbar-brand img {
+    height: 90px;
+    width: auto;
+    margin-top: -8px;
+    margin-bottom: -8px;
+}
+
+.navbar-brand span {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: .5px;
+}
+
+.navbar-brand span span {
+    color: #63F2F4 !important;
+}
+
+/* Links */
+
+.navbar-nav {
+    gap: 20px;
+}
+
+.navbar-nav .nav-link {
+    color: #dbe4ee !important;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    transition: .3s;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #63F2F4 !important;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #63F2F4;
+    transition: .3s;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+
+/* Button */
+
+.enroll-btn {
+    background: #63F2F4;
+    color: #0B0F17;
+    padding: 8px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.enroll-btn:hover {
+    transform: translateY(-2px);
+    color: #0B0F17;
+    box-shadow: 0 0 20px rgba(99, 242, 244, .4);
+}
+
+/* Toggle Button */
+
+.navbar-toggler {
+    border: 1px solid #63F2F4;
+    padding: 6px 10px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* Cyan Hamburger */
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(99,242,244,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar .container-fluid {
+    flex-wrap: nowrap;
+}
+
+.navbar-toggler {
+    margin-left: auto;
+}
+
+.navbar-collapse {
+    flex-basis: 100%;
+}
+
+/* ==========================
+   1280px
+========================== */
+
+@media (max-width: 1280px) {
+
+    .navbar-brand img {
+        height: 85px;
+    }
+
+    .navbar-brand span {
+        font-size: 18px;
+    }
+
+    .navbar-nav {
+        gap: 15px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 14px;
+    }
+}
+
+/* ==========================
+   1024px
+========================== */
+
+@media (max-width: 1024px) {
+
+    .navbar {
+        height: 70px;
+    }
+
+    .navbar-brand {
+        height: 70px;
+    }
+
+    .navbar-brand img {
+        height: 80px;
+    }
+
+    .navbar-brand span {
+        font-size: 17px;
+    }
+
+    .navbar-nav {
+        gap: 12px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 14px;
+    }
+
+    .enroll-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+/* ==========================
+   800px
+========================== */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .navbar-brand {
+        height: auto;
+    }
+
+    .navbar-brand img {
+        height: 70px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .navbar-brand span {
+        font-size: 16px;
+    }
+
+    .navbar-collapse {
+        background: #121a2a;
+        margin-top: 12px;
+        border-radius: 15px;
+        padding: 15px;
+        border: 1px solid rgba(99, 242, 244, .15);
+    }
+
+    .navbar-nav {
+        gap: 8px;
+        text-align: center;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 0;
+        font-size: 15px;
+    }
+
+    .navbar-nav .nav-link::after {
+        display: none;
+    }
+
+    .enroll-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+/* ==========================
+   500px
+========================== */
+
+@media (max-width: 500px) {
+
+    .navbar {
+        padding: 8px 0;
+    }
+
+    .navbar-brand img {
+        height: 60px;
+    }
+
+    .navbar-brand span {
+        font-size: 14px;
+        letter-spacing: 0;
+    }
+
+    .navbar-toggler {
+        padding: 5px 8px;
+    }
+
+    .navbar-collapse {
+        padding: 12px;
+        border-radius: 12px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+
+    .enroll-btn {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        margin-top: 8px;
+    }
+}
+
+/* MOBILE FIX */
+
+@media (max-width: 991px) {
+
+    .navbar {
+        height: auto;
+    }
+
+    .navbar-brand {
+        max-width: 70%;
+    }
+
+    .navbar-toggler {
+        margin-left: auto;
+    }
+}

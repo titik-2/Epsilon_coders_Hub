@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>EPSILON CODER'S HUB</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <link rel="stylesheet" href="courses.css">
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon">
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="navbar.css">
+  <style>
+    /* =========================
+   DARK THEME TOKENS (matches About page)
+========================= */
+
+    :root {
+      --bg: #0B0F17;
+      --bg-card: #0F1626;
+      --border-soft: rgba(148, 163, 184, .14);
+      --accent-cyan: #63F2F4;
+      --accent-green: #34D399;
+      --accent-blue: #3B82F6;
+      --accent-purple: #A78BFA;
+      --text-gray: #94a3b8;
+      --text-gray-light: #cbd5e1;
+    }
+
+    html,
+    body {
+      background: var(--bg);
+    }
+
+    body {
+      color: #e2e8f0;
+      font-family: 'Heebo', sans-serif;
+    }
+
+    .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--accent-cyan);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .section-eyebrow::before,
+    .section-eyebrow::after {
+      content: '';
+      width: 26px;
+      height: 1px;
+      background: var(--accent-cyan);
+      opacity: .55;
+    }
+
+    /* =========================
+   TECH STACK SECTION
+========================= */
+
+    .tech-stack-section {
+      padding: 60px 0;
+      background: transparent;
+      overflow: hidden;
+    }
+
+    .tech-heading {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .tech-heading span {
+      color: #63F2F4;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 3px;
+    }
+
+    .tech-heading h2 {
+      margin-top: 10px;
+      font-size: 34px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    /* SLIDER */
+
+    .tech-slider {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .tech-track {
+      display: flex;
+      gap: 18px;
+      width: max-content;
+      animation: techScroll 22s linear infinite;
+    }
+
+    /* CARD */
+
+    .tech-card {
+      width: 120px;
+      height: 95px;
+
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+
+      border-radius: 16px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      transition: .3s;
+
+      box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
+    }
+
+    .tech-card:hover {
+      transform: translateY(-6px);
+
+      border-color: #63F2F4;
+
+      box-shadow:
+        0 10px 25px rgba(99, 242, 244, .25);
+    }
+
+    .tech-card img {
+      height: 30px;
+      width: auto;
+      object-fit: contain;
+      background: #fff;
+      padding: 5px;
+      border-radius: 8px;
+    }
+
+    .tech-card p {
+      margin-top: 8px;
+      margin-bottom: 0;
+
+      font-size: 13px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    /* ANIMATION */
+
+    @keyframes techScroll {
+
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* MOBILE */
+
+    @media(max-width:768px) {
+
+      .tech-card {
+        width: 100px;
+        height: 85px;
+      }
+
+      .tech-card img {
+        height: 32px;
+      }
+
+      .tech-heading h2 {
+        font-size: 26px;
+      }
+
+    }
+
+    /* footer starts here */
+    /* =========================
+   FOOTER
+========================= */
+
+
+    .footer {
+      background: #0B0F17;
+      color: #fff;
+      padding: 35px 0 0;
+      margin-top: 60px;
+    }
+
+    .footer-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* GRID */
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 40px;
+      align-items: start;
+      padding-bottom: 25px;
+    }
+
+    /* LOGO */
+
+    .footer-logo {
+      font-size: 26px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .footer-logo span {
+      color: #63F2F4;
+    }
+
+    /* DESCRIPTION */
+
+    .footer-desc {
+      color: #94a3b8;
+      font-size: 14px;
+      line-height: 1.7;
+      max-width: 500px;
+      margin-bottom: 18px;
+    }
+
+    /* TITLE */
+
+    .footer-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 18px;
+      color: #fff;
+    }
+
+    /* CONTACT */
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      color: #cbd5e1;
+
+      margin-bottom: 12px;
+
+      font-size: 14px;
+    }
+
+    .contact-item i {
+      color: #63F2F4;
+      width: 20px;
+      min-width: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    /* SOCIAL */
+
+    .social-icons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-icons a {
+      width: 38px;
+      height: 38px;
+
+      border-radius: 10px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: rgba(255, 255, 255, .06);
+
+      color: #fff;
+
+      transition: .3s;
+
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      background: #63F2F4;
+      color: #0B0F17;
+      transform: translateY(-3px);
+    }
+
+    /* BOTTOM */
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, .08);
+
+      text-align: center;
+
+      padding: 15px 0;
+
+      font-size: 13px;
+
+      color: #94a3b8;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:768px) {
+
+      .footer {
+        padding-top: 25px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        text-align: center;
+      }
+
+      .footer-desc {
+        margin: auto auto 18px;
+      }
+
+      .contact-item {
+        justify-content: center;
+      }
+
+      .social-icons {
+        justify-content: center;
+      }
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .footer-brand img {
+      height: 55px;
+      width: auto;
+    }
+
+    .spinner-border-custom {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    .navbar-brand-text {
+      margin-left: 10px;
+    }
+
+    .navbar-brand-highlight {
+      color: #2563eb;
+    }
+
+
+    /* BACKDROP */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(5px);
+
+      justify-content: center;
+      align-items: center;
+
+      z-index: 9999;
+    }
+
+    /* BOX */
+    .modal-content {
+      background: #121a2a;
+      padding: 25px;
+      border-radius: 15px;
+      width: 320px;
+
+      box-shadow: 0 0 25px rgba(0, 229, 255, 0.3);
+
+      text-align: center;
+      position: relative;
+    }
+
+    /* CLOSE BUTTON */
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 22px;
+      cursor: pointer;
+      color: white;
+    }
+
+    /* INPUTS */
+    .modal-content input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+
+      border: none;
+      border-radius: 8px;
+    }
+
+    /* BUTTON */
+    .modal-content button {
+      width: 100%;
+      padding: 10px;
+
+      background: #00e5ff;
+      border: none;
+      border-radius: 8px;
+
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* SUCCESS MESSAGE */
+    #successMsg {
+      color: #00ff88;
+      margin-top: 10px;
+      font-weight: 600;
+    }
+
+    .modal-content #courseName {
+      color: #fff;
+      font-family: 'Nunito', sans-serif;
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+
+    .modal-content input::placeholder {
+      color: #64748b;
+    }
+
+    .modal-content input {
+      background: #ffffff;
+      color: #0B0F17;
+      border: 1px solid transparent;
+      transition: .25s;
+    }
+
+    .modal-content input:focus {
+      outline: none;
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 0 3px rgba(99, 242, 244, .2);
+    }
+
+    .modal-content button {
+      background: linear-gradient(135deg, #63F2F4, #3B82F6);
+      color: #06121a;
+      transition: .25s;
+    }
+
+    .modal-content button:hover {
+      box-shadow: 0 8px 20px rgba(99, 242, 244, .3);
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+   COURSE SECTION
+========================= */
+
+    .course-section {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 90px 20px 100px;
+    }
+
+    .course-heading {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .course-heading h2 {
+      margin-top: 16px;
+      font-size: 40px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .course-heading h2 span {
+      color: var(--accent-cyan);
+    }
+
+    .course-heading p {
+      margin-top: 14px;
+      color: var(--text-gray);
+      font-size: 16px;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+    }
+
+    .course-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      border-radius: 22px;
+      overflow: hidden;
+      transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+    }
+
+    .course-card::after {
+      content: '';
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 0;
+      height: 3px;
+      border-radius: 3px;
+      background: var(--accent-cyan);
+      opacity: .8;
+    }
+
+    .course-card:nth-child(4n+2)::after {
+      background: var(--accent-green);
+    }
+
+    .course-card:nth-child(4n+3)::after {
+      background: var(--accent-blue);
+    }
+
+    .course-card:nth-child(4n+4)::after {
+      background: var(--accent-purple);
+    }
+
+    .course-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(99, 242, 244, .4);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, .35), 0 0 30px rgba(99, 242, 244, .12);
+    }
+
+    .course-image {
+      position: relative;
+      height: 190px;
+      overflow: hidden;
+    }
+
+    .course-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .5s ease;
+    }
+
+    .course-card:hover .course-image img {
+      transform: scale(1.06);
+    }
+
+    .badge-best {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: linear-gradient(135deg, #fb923c, #f43f5e);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 999px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, .3);
+    }
+
+    .badge-rating {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: rgba(11, 15, 23, .8);
+      backdrop-filter: blur(6px);
+      color: #facc15;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, .12);
+    }
+
+    .img-enrolled {
+      position: absolute;
+      left: 14px;
+      bottom: 14px;
+      background: rgba(11, 15, 23, .8);
+      backdrop-filter: blur(6px);
+      color: #e2e8f0;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 5px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, .1);
+    }
+
+    .course-body {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 22px 22px 26px;
+    }
+
+    .course-title {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .course-desc {
+      color: var(--text-gray);
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      flex: 1;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 10px;
+      margin-top: auto;
+    }
+
+    .btn {
+      flex: 1;
+      text-align: center;
+      padding: 11px 12px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: .25s;
+      cursor: pointer;
+    }
+
+    .btn.enroll {
+      background: linear-gradient(135deg, #63F2F4, #3B82F6);
+      color: #06121a;
+      border: none;
+    }
+
+    .btn.enroll:hover {
+      box-shadow: 0 8px 20px rgba(99, 242, 244, .35);
+      transform: translateY(-2px);
+    }
+
+    .btn.details {
+      background: transparent;
+      color: var(--accent-cyan);
+      border: 1px solid rgba(99, 242, 244, .35);
+    }
+
+    .btn.details:hover {
+      background: rgba(99, 242, 244, .08);
+      border-color: var(--accent-cyan);
+    }
+
+    /* =========================
+   COURSE DETAILS MODAL
+========================= */
+
+    .details-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, .75);
+      backdrop-filter: blur(6px);
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      z-index: 9999;
+    }
+
+    .details-content {
+      position: relative;
+      width: 100%;
+      max-width: 560px;
+      max-height: 85vh;
+      overflow-y: auto;
+      background: #121a2a;
+      border: 1px solid rgba(99, 242, 244, .15);
+      border-radius: 18px;
+      padding: 32px;
+      box-shadow: 0 0 40px rgba(99, 242, 244, .15);
+    }
+
+    .details-content h2 {
+      color: #fff;
+      font-family: 'Nunito', sans-serif;
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+
+    .details-content p {
+      color: var(--text-gray-light);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .details-content hr {
+      border: none;
+      border-top: 1px solid rgba(255, 255, 255, .1);
+      margin: 18px 0;
+    }
+
+    .details-content h4 {
+      color: var(--accent-cyan);
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 18px;
+      margin-bottom: 6px;
+    }
+
+    .close-details {
+      position: absolute;
+      top: 14px;
+      right: 18px;
+      font-size: 24px;
+      color: #fff;
+      cursor: pointer;
+      line-height: 1;
+      transition: .2s;
+    }
+
+    .close-details:hover {
+      color: var(--accent-cyan);
+    }
+
+    @media(max-width: 1200px) {
+      .course-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media(max-width: 992px) {
+      .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width: 768px) {
+      .course-section {
+        padding: 60px 20px 70px;
+      }
+
+      .course-heading h2 {
+        font-size: 30px;
+      }
+
+      .course-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Spinner Start -->
+  <div id="spinner"
+    class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-border text-primary spinner-border-custom" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+  <!-- Spinner End -->
+
+
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container-fluid d-flex align-items-center">
+
+      <!-- LEFT SIDE: Logo + Text -->
+      <a href="index.html" class="navbar-brand d-flex align-items-center">
+        <img src="img/eps_logo.png" alt="logo">
+        <span>
+          EPSILON <span style="color:#63F2F4;">CODER'S HUB</span>
+        </span>
+      </a>
+
+      <!-- RIGHT SIDE: HAMBURGER -->
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- MENU -->
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+
+        <div class="navbar-nav mx-auto">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link ">About</a>
+          <a href="courses.html" class="nav-link courses">Courses</a>
+          <a href="gallery.html" class="nav-link">Gallery</a>
+          <a href="workshop.html" class="nav-link ">Workshop</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+
+        <a href="contact.html" class="enroll-btn ms-lg-3">
+          Enroll Now
+        </a>
+
+      </div>
+
+    </div>
+  </nav>
+  <!-- Navbar End -->
+  <!-- TECH STACK START -->
+
+  <section class="tech-stack-section">
+
+    <div class="tech-heading">
+      <span>TECH STACK WE TEACH</span>
+      <h2>Technologies You'll Master</h2>
+    </div>
+
+    <div class="tech-slider">
+
+      <div class="tech-track">
+
+        <!-- ROW 1 -->
+        <div class="tech-card">
+          <img src="img/c.jpg" alt="">
+          <p>C</p>
+        </div>
+        <div class="tech-card">
+          <img src="img/c++.jpg" alt="">
+          <p>C++</p>
+        </div>
+        <div class="tech-card">
+          <img src="img/java.jpg" alt="">
+          <p>Java</p>
+        </div>
+
+
+
+        <div class="tech-card">
+          <img src="img/python.jpg" alt="">
+          <p>Python</p>
+        </div>
+
+        <div class="tech-card">
+          <img src="img/react.jpg" alt="">
+          <p>React</p>
+        </div>
+
+        <div class="tech-card">
+          <img src="img/html.jpg" alt="">
+          <p>HTML5</p>
+        </div>
+
+        <div class="tech-card">
+          <img src="img/css.jpg" alt="">
+          <p>CSS3</p>
+        </div>
+
+        <div class="tech-card">
+          <img src="img/javascript.jpg" alt="">
+          <p>JavaScript</p>
+        </div>
+
+        <div class="tech-card">
+          <img src="img/mysql.jpg" alt="">
+          <p>MySQL</p>
+        </div>
+
+        <!-- DUPLICATE FOR SMOOTH LOOP -->
+
+        <div class="tech-card">
+          <img src="img/c.jpg" alt="">
+          <p>C</p>
+        </div>
+        <div class="tech-card">
+          <img src="img/c++.jpg" alt="">
+          <p>C++</p>
+        </div>
+        <div class="tech-card">
+          <img src="img/java.jpg" alt="">
+          <p>Java</p>
+        </div>
+
+
+
+        <div class="tech-card">
+          <img src="img/python.jpg" alt="">
+          <p>Python</p>
+        </div>
+
+        <div class="tech-card">
+          <img src="img/react.jpg" alt="">
+          <p>React</p>
+        </div>
+
+        <div class="tech-card">
+          <img src="img/html.jpg" alt="">
+          <p>HTML5</p>
+        </div>
+
+        <div class="tech-card">
+          <img src="img/css.jpg" alt="">
+          <p>CSS3</p>
+        </div>
+
+        <div class="tech-card">
+          <img src="img/javascript.jpg" alt="">
+          <p>JavaScript</p>
+        </div>
+
+        <div class="tech-card">
+          <img src="img/mysql.jpg" alt="">
+          <p>MySQL</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- TECH STACK END -->
+
+
+  <!-- course card starts -->
+
+  <!-- ─── SECTION ─────────────────────────────── -->
+  <div class="course-section">
+
+    <div class="course-heading">
+      <span class="section-eyebrow">Our Programs</span>
+      <h2>Our <span>Premium Courses</span></h2>
+      <p>Industry-ready training with practical learning & real projects</p>
+    </div>
+
+    <div class="course-grid">
+
+      <!-- 1)c & c++ card -->
+      <div class="course-card">
+        <div class="course-image">
+          <img src="img/Crs-1.jpg" alt="C & C++ Programming">
+          <div class="badge-best">BESTSELLER</div>
+          <div class="badge-rating">★ 4.8</div>
+        </div>
+        <div class="course-body">
+          <div class="course-title">C & C++ Programming</div>
+          <div class="course-desc">Basic programming with C and C++</div>
+
+          <div class="btn-row">
+            <a href="javascript:void(0)" class="btn enroll" onclick="openEnrollModal('C & C++ Programming')">Enroll</a>
+            <a href="#" class="btn details" onclick="openDetailsModal(
+        'C &amp; C++ Programming',
+        'Learn C fundamentals, C++ OOP, Data Structures, and problem-solving with real-world coding practice',
+        '3 Months',
+        '₹2999',
+        'C Basics (syntax, loops, functions, arrays), Pointers, Memory Management, Structures, C++ OOP (classes, objects, inheritance, polymorphism), STL basics, Problem Solving, DSA fundamentals, Mini Projects',
+        'Software Developer, C/C++ Programmer, Backend Developer, Game Developer (Basics), Problem Solving Engineer'
+      )">Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 python-->
+      <div class="course-card">
+        <div class="course-image">
+          <img src="img/Crs-4.webp" alt="Python AI / ML">
+          <div class="badge-best">BESTSELLER</div>
+          <div class="badge-rating">★ 4.9</div>
+
+        </div>
+        <div class="course-body">
+          <div class="course-title">Python AI / ML</div>
+          <div class="course-desc">Python, Data Science, AI Models</div>
+
+          <div class="btn-row">
+            <a href="javascript:void(0)" class="btn enroll"
+              onclick="openEnrollModal('Python AI / ML Development')">Enroll</a>
+            <a href="#" class="btn details" onclick="openDetailsModal(
+        'Python AI / ML Development',
+        'Python, Artificial Intelligence, Machine Learning, Data Science with real-world projects',
+        '6 Months',
+        '₹9999',
+        'Python Programming, Data Analysis, NumPy, Pandas, Data Visualization, Machine Learning, Deep Learning Basics, AI Concepts, Model Building, Project Development, Deployment',
+        'Python Developer, AI Engineer, Machine Learning Engineer, Data Analyst, Data Scientist, AI Research Assistant, Freelancer'
+      )">Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 — java -->
+      <div class="course-card">
+        <div class="course-image">
+          <img src="img/javaprogramming.jpg" alt="Java Programming">
+          <div class="badge-best">BESTSELLER</div>
+          <div class="badge-rating">★ 4.8</div>
+
+        </div>
+        <div class="course-body">
+          <div class="course-title">Java Programming</div>
+          <div class="course-desc">Core Java, OOP, Spring Boot & Projects</div>
+
+          <div class="btn-row">
+            <a href="javascript:void(0)" class="btn enroll" onclick="openEnrollModal('Java Programming')">Enroll</a>
+            <a href="#" class="btn details" onclick="openDetailsModal(
+        'Java Programming',
+        'Core Java, Object-Oriented Programming, Spring Boot, and real-world backend projects',
+        '4 Months',
+        '₹5999',
+        'Java Basics, OOP Concepts, Exception Handling, Collections Framework, File I/O, JDBC, Multithreading, Spring Boot, REST APIs, Maven, Git & GitHub, Mini Projects',
+        'Java Developer, Backend Developer, Software Engineer, Android Developer (Basics), Full Stack Developer, Freelancer'
+      )">Details</a>
+          </div>
+        </div>
+      </div>
+      <!-- CARD 4full stack  -->
+      <div class="course-card">
+        <div class="course-image">
+          <img src="img/Crs-8.jpeg" alt="Full Stack Java">
+          <div class="badge-best">BESTSELLER</div>
+          <div class="badge-rating">★ 4.9</div>
+
+        </div>
+        <div class="course-body">
+          <div class="course-title">Full Stack Java</div>
+          <div class="course-desc">Core Java, Spring Boot, APIs</div>
+
+          <div class="btn-row">
+            <a href="javascript:void(0)" class="btn enroll"
+              onclick="openEnrollModal('Full Stack Java Development')">Enroll</a>
+            <a href="#" class="btn details" onclick="openDetailsModal(
+        'Full Stack Java Development',
+        'Java, Spring Boot, MySQL, React with industry-level projects',
+        '6 Months',
+        '₹8999',
+        'Core Java, Advanced Java, JDBC, Servlets, Spring Boot, Hibernate, MySQL, REST APIs, React.js, Git &amp; GitHub, Project Development, Deployment',
+        'Java Developer, Full Stack Java Developer, Backend Developer, Software Engineer, Application Developer'
+      )">Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- card 5 python full stack -->
+      <div class="course-card">
+        <div class="course-image">
+          <img src="img/pythonfullstack.jpg" alt="Python Full Stack">
+          <div class="badge-best">BESTSELLER</div>
+          <div class="badge-rating">★ 4.9</div>
+
+        </div>
+        <div class="course-body">
+          <div class="course-title">Python Full Stack</div>
+          <div class="course-desc">Python, Django, React & Real Projects</div>
+          <div class="btn-row">
+            <a href="javascript:void(0)" class="btn enroll"
+              onclick="openEnrollModal('Python Full Stack Development')">Enroll</a>
+            <a href="#" class="btn details" onclick="openDetailsModal(
+        'Python Full Stack Development',
+        'Python, Django, React, PostgreSQL with industry-level real-world projects',
+        '6 Months',
+        '₹8999',
+        'Python Basics, OOP, Django Framework, Django REST Framework, PostgreSQL, React.js, HTML & CSS, REST APIs, Authentication, Git & GitHub, Deployment, Real-World Projects, Portfolio Building',
+        'Python Developer, Full Stack Developer, Backend Developer, Django Developer, Web Application Developer, Freelancer'
+      )">Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 6: MERN Stack -->
+      <div class="course-card">
+        <div class="course-image">
+          <img src="img/crs-12.jpeg" alt="MERN Stack Development">
+          <div class="badge-best">BESTSELLER</div>
+          <div class="badge-rating">★ 4.9</div>
+
+        </div>
+        <div class="course-body">
+          <div class="course-title">MERN Stack Development</div>
+          <div class="course-desc">MongoDB, Express.js, React.js, Node.js</div>
+
+          <div class="btn-row">
+            <a href="javascript:void(0)" class="btn enroll"
+              onclick="openEnrollModal('MERN Stack Development')">Enroll</a>
+            <a href="#" class="btn details" onclick="openDetailsModal(
+        'MERN Stack Development',
+        'MongoDB, Express.js, React.js, Node.js with real-world projects',
+        '6 Months',
+        '₹8999',
+        'MongoDB, Express.js, React.js, Node.js, REST APIs, Authentication &amp; Authorization, Database Management, Redux, JWT, CRUD Operations, Git &amp; GitHub, Deployment, Real-World Projects, Portfolio Building',
+        'MERN Stack Developer, Full Stack Developer, Backend Developer, Frontend Developer, Web Application Developer, Freelancer'
+      )">Details</a>
+          </div>
+        </div>
+      </div>
+      <!-- card 7 SQL -->
+      <div class="course-card">
+        <div class="course-image">
+          <img src="img/Crs-10.jpeg" alt="SQL & Database Management">
+          <div class="badge-best">TRENDING</div>
+          <div class="badge-rating">★ 4.7</div>
+
+        </div>
+        <div class="course-body">
+          <div class="course-title">SQL & Database Management</div>
+          <div class="course-desc">Database querying and management</div>
+          <div class="btn-row">
+            <a href="javascript:void(0)" class="btn enroll"
+              onclick="openEnrollModal('SQL & Database Management')">Enroll</a>
+            <a href="#" class="btn details" onclick="openDetailsModal(
+        'SQL &amp; Database Management',
+        'Learn SQL from basics to advanced with real database querying and hands-on practice',
+        '1.5 Months',
+        '₹1999',
+        'SQL Basics (SELECT, INSERT, UPDATE, DELETE), Filtering &amp; Sorting, Joins (INNER, LEFT, RIGHT), Group By &amp; Aggregations, Subqueries, Indexing Basics, Database Design, MySQL/PostgreSQL Practice, Real-World Queries',
+        'Database Developer, SQL Developer, Backend Support Engineer, Data Analyst (Basic), Software Developer'
+      )">Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 8: BCA / MCA / BSc IT -->
+      <div class="course-card">
+        <div class="course-image">
+          <img src="img/Crs-13.jpeg" alt="BCA / MCA / BSc IT">
+          <div class="badge-best">POPULAR</div>
+          <div class="badge-rating">★ 4.9</div>
+
+        </div>
+        <div class="course-body">
+          <div class="course-title">BCA / MCA / BSc IT</div>
+          <div class="course-desc">Academic + Practical Coding Support</div>
+
+          <div class="btn-row">
+            <a href="javascript:void(0)" class="btn enroll"
+              onclick="openEnrollModal('BCA / MCA / BSc IT Career Development Program')">Enroll</a>
+            <a href="#" class="btn details" onclick="openDetailsModal(
+        'BCA / MCA / BSc IT Career Development Program',
+        'Comprehensive academic and industry-oriented training designed for BCA, MCA, and BSc IT students to strengthen technical skills and improve career opportunities',
+        '1 Year',
+        '₹9999',
+        'C Programming, C++, Java, Python, DBMS, SQL, Data Structures, Operating Systems, Computer Networks, HTML, CSS, JavaScript, Web Development, Academic Projects, Major Projects, Practical Lab Support, Viva Preparation, Interview Preparation, Resume Building',
+        'Software Developer, Full Stack Developer, Java Developer, Python Developer, Web Developer, Database Developer, System Analyst, IT Professional'
+      )">Details</a>
+          </div>
+        </div>
+      </div>
+      <!-- CARD 9: BCCA -->
+      <div class="course-card">
+        <div class="course-image">
+          <img src="img/Crs-14.jpeg" alt="BCCA">
+          <div class="badge-best">POPULAR</div>
+          <div class="badge-rating">★ 4.8</div>
+
+        </div>
+        <div class="course-body">
+          <div class="course-title">BCCA</div>
+          <div class="course-desc">Academic + Practical Coding Support</div>
+
+          <div class="btn-row">
+            <a href="javascript:void(0)" class="btn enroll"
+              onclick="openEnrollModal('BCCA Professional Training Program')">Enroll</a>
+            <a href="#" class="btn details" onclick="openDetailsModal(
+        'BCCA Professional Training Program',
+        'Complete academic and practical training specially designed for BCCA students to strengthen programming, project development, and industry-ready skills',
+        '1 Year',
+        '₹9999',
+        'C Programming, C++, Java, Python, DBMS, SQL, Data Structures, Web Development, Mini Projects, Major Projects, Practical Lab Support, Viva Preparation, Academic Guidance, Interview Preparation, Resume Building',
+        'Software Developer, Java Developer, Python Developer, Web Developer, Full Stack Developer, Database Developer, Freelancer'
+      )">Details</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Explore All Courses Button -->
+
+
+
+
+
+    </div>
+    <!-- course card ends -->
+
+
+  </div>
+  </section>
+
+
+  <!-- Footer Start -->
+  <footer class="footer">
+
+    <div class="footer-container">
+
+      <div class="footer-grid">
+
+        <!-- LEFT SIDE -->
+        <div class="footer-col">
+
+          <div class="footer-brand">
+            <img src="img/eps_logo.png" alt="Epsilon Logo">
+            <h2 class="footer-logo">
+              EPSILON <span>CODER'S HUB</span>
+            </h2>
+          </div>
+
+          <p class="footer-desc">
+            Empowering students with practical coding skills,
+            live projects, industry-focused training and career
+            guidance to become future-ready IT professionals.
+          </p>
+
+          <div class="social-icons">
+
+            <a href="#" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="https://www.instagram.com/epsiloncoding/" target="_blank" rel="noopener noreferrer"
+              title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/mehul-ghiya-6b722b58/" target="_blank" rel="noopener noreferrer"
+              title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+
+            <a href="https://www.youtube.com/@Mehulsi" target="_blank" rel="noopener noreferrer" title="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="footer-col">
+
+          <h3 class="footer-title">
+            Get In Touch
+          </h3>
+
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Nandanvan Canal Road, Nagpur</span>
+          </div>
+
+          <div class="contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <span>+91 7709799654</span>
+          </div>
+
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>info@epsiloncodershub.com</span>
+          </div>
+
+          <div class="contact-item">
+            <i class="fas fa-clock"></i>
+            <span>Mon - Sat | 10 AM - 9 PM</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 Epsilon Coder's Hub | Learn • Build • Succeed
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- Footer End -->
+
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Template JS -->
+  <script src="js/main.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $(".header-carousel").owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        autoplayHoverPause: false,
+        smartSpeed: 900,
+        dots: true,
+        nav: false
+      });
+    });
+  </script>
+  <!-- ENROLL MODAL -->
+  <div id="enrollModal" class="modal">
+
+    <div class="modal-content">
+
+      <span class="close" onclick="closeEnrollModal()">&times;</span>
+
+      <h2 id="courseName">Enroll Now</h2>
+
+      <form id="enrollForm">
+
+        <input type="text" id="studentName" placeholder="Your Name" required>
+
+        <input type="tel" id="studentMobile" placeholder="Mobile Number" required>
+
+        <input type="hidden" id="selectedCourse">
+
+        <button type="submit">Submit</button>
+
+        <p id="successMsg"></p>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+
+  <script>
+    function openEnrollModal(courseName) {
+      document.getElementById("enrollModal").style.display = "flex";
+      document.getElementById("courseName").innerText = "Enroll: " + courseName;
+      document.getElementById("selectedCourse").value = courseName;
+    }
+
+    function closeEnrollModal() {
+      document.getElementById("enrollModal").style.display = "none";
+      document.getElementById("successMsg").innerText = "";
+    }
+
+    // close when clicking outside box
+    window.onclick = function (event) {
+      let modal = document.getElementById("enrollModal");
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+  <!-- email.js javascript from here -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+  <script>
+      (function () {
+        emailjs.init("o3nPOhz1ZhykbARgc");
+      })();
+  </script>
+  <script>
+    document.getElementById("enrollForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      let name = document.getElementById("studentName").value;
+      let mobile = document.getElementById("studentMobile").value;
+      let course = document.getElementById("selectedCourse").value;
+
+      let params = {
+        student_name: name,
+        student_mobile: mobile,
+        course_name: course
+      };
+
+      emailjs.send("service_nqpjxmi", "template_n8cugsi", params)
+        .then(function (response) {
+
+          document.getElementById("successMsg").innerText =
+            "We will contact you very soon 👍";
+
+          document.getElementById("enrollForm").reset();
+
+          setTimeout(() => {
+            closeEnrollModal();
+          }, 2000);
+
+        }, function (error) {
+
+          console.log("FAILED...", error);
+
+          document.getElementById("successMsg").innerText =
+            "Something went wrong. Try again.";
+
+        });
+    });
+
+    function openDetailsModal(
+      title,
+      description,
+      duration,
+      fees,
+      topics,
+      career
+    ) {
+
+      document.getElementById("modalCourseTitle").innerText = title;
+      document.getElementById("modalCourseDesc").innerText = description;
+      document.getElementById("modalDuration").innerText = duration;
+      document.getElementById("modalFees").innerText = fees;
+      document.getElementById("modalTopics").innerText = topics;
+      document.getElementById("modalCareer").innerText = career;
+
+      document.getElementById("detailsModal").style.display = "flex";
+    }
+
+    function closeDetailsModal() {
+      document.getElementById("detailsModal").style.display = "none";
+    }
+  </script>
+  <!-- COURSE DETAILS MODAL -->
+
+  <div id="detailsModal" class="details-modal">
+
+    <div class="details-content">
+
+      <span class="close-details" onclick="closeDetailsModal()">&times;</span>
+
+      <h2 id="modalCourseTitle"></h2>
+
+      <p id="modalCourseDesc"></p>
+
+      <hr>
+
+      <h4>Duration</h4>
+      <p id="modalDuration"></p>
+
+      <h4>Fees</h4>
+      <p id="modalFees"></p>
+
+      <h4>What You Will Learn</h4>
+      <p id="modalTopics"></p>
+
+      <h4>Career Opportunities</h4>
+      <p id="modalCareer"></p>
+
+    </div>
+
+  </div>
+
+  <script>
+    $('.festival-carousel').owlCarousel({
+      loop: true,
+      margin: 20,
+      autoplay: true,
+      autoplayTimeout: 2500,
+      smartSpeed: 800,
+      responsive: {
+        0: { items: 1 },
+        600: { items: 2 },
+        1000: { items: 3 }
+      }
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

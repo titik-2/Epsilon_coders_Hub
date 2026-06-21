@@ -1,0 +1,2814 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>EPSILON CODER'S HUB</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <link rel="stylesheet" href="index.css">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=DM+Sans:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="navbar.css">
+    <style>
+        /* =========================================================
+           GLOBAL DARK THEME (matches reference screenshot)
+        ========================================================= */
+        :root {
+            --bg-dark: #0B0F17;
+            --bg-darker: #070a10;
+            --bg-card: #10151f;
+            --accent: #63F2F4;
+            --accent-2: #3b82f6;
+            --text-muted: #94a3b8;
+            --border-glow: rgba(99, 242, 244, .25);
+        }
+
+        body {
+            background: var(--bg-dark);
+            color: #e2e8f0;
+        }
+
+        /* SECTION */
+        /* =========================
+   WHY CHOOSE US SECTION
+========================= */
+        /* ===================================
+   WHY EPSILON SECTION
+=================================== */
+
+        .why-epsilon-section {
+            background: var(--bg-dark);
+            padding: 80px 0;
+        }
+
+        .section-badge {
+            display: inline-block;
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .section-badge::before,
+        .section-badge::after {
+            content: "—";
+            margin: 0 10px;
+            color: var(--accent);
+            opacity: .6;
+        }
+
+        .section-heading {
+            font-size: 42px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .section-heading .highlight {
+            color: var(--accent);
+        }
+
+        .section-subtitle {
+            max-width: 750px;
+            margin: auto;
+            color: var(--text-muted);
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        /* ===================================
+   CARD
+=================================== */
+
+        .epsilon-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, .08);
+            border-radius: 20px;
+            padding: 35px 25px;
+            text-align: center;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            transition: .35s;
+        }
+
+        .epsilon-card::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 20%;
+            right: 20%;
+            height: 2px;
+            background: var(--accent);
+            box-shadow: 0 0 15px 2px var(--accent);
+            border-radius: 2px;
+        }
+
+        .epsilon-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent);
+            box-shadow: 0 15px 35px var(--border-glow);
+        }
+
+        /* ===================================
+   ICON BOX
+=================================== */
+
+        .icon-box {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 22px;
+
+            background: rgba(99, 242, 244, .12);
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            transition: .35s;
+        }
+
+        .icon-box i {
+            font-size: 32px;
+            color: var(--accent);
+            transition: .35s;
+        }
+
+        .epsilon-card:hover .icon-box {
+            background: var(--accent);
+            box-shadow: 0 0 25px var(--border-glow);
+        }
+
+        .epsilon-card:hover .icon-box i {
+            color: var(--bg-dark);
+        }
+
+        /* ===================================
+   TEXT
+=================================== */
+
+        .epsilon-card h5 {
+            font-size: 21px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 14px;
+        }
+
+        .epsilon-card p {
+            color: var(--text-muted);
+            font-size: 14.5px;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        /* ===================================
+   MOBILE
+=================================== */
+
+        @media(max-width:991px) {
+
+            .section-heading {
+                font-size: 34px;
+            }
+        }
+
+        @media(max-width:768px) {
+
+            .section-heading {
+                font-size: 28px;
+            }
+
+            .section-subtitle {
+                font-size: 15px;
+            }
+
+            .epsilon-card {
+                padding: 25px 20px;
+            }
+
+            .icon-box {
+                width: 60px;
+                height: 60px;
+            }
+
+            .icon-box i {
+                font-size: 24px;
+            }
+        }
+
+        /* about section css */
+        /* ==========================
+   ABOUT SECTION
+========================== */
+
+        .about-section {
+            padding: 80px 0;
+            background: var(--bg-darker);
+        }
+
+        .about-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, .5);
+            border: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 400px;
+            /* Smaller image */
+            object-fit: cover;
+            transition: .4s;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-badge {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+
+            background: var(--bg-dark);
+            color: var(--accent);
+
+            padding: 12px 18px;
+            border-radius: 12px;
+            border: 1px solid var(--border-glow);
+
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .about-tag {
+            display: inline-block;
+
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 3px;
+
+            margin-bottom: 15px;
+        }
+
+        .about-title {
+            font-size: 40px;
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.2;
+            margin-bottom: 18px;
+        }
+
+        .about-text {
+            color: var(--text-muted);
+            line-height: 1.9;
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .course-item {
+            background: var(--bg-card);
+
+            padding: 14px 16px;
+
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, .08);
+
+            font-weight: 600;
+            color: #ffffff;
+
+            transition: .3s;
+        }
+
+        .course-item i {
+            color: var(--accent);
+            margin-right: 8px;
+        }
+
+        .course-item:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 25px var(--border-glow);
+        }
+
+        .about-note {
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .about-btn {
+            display: inline-block;
+
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: var(--bg-dark);
+
+            padding: 12px 25px;
+
+            border-radius: 30px;
+
+            font-weight: 700;
+            text-decoration: none;
+
+            transition: .3s;
+        }
+
+        .about-btn:hover {
+            transform: translateY(-3px);
+            color: var(--bg-dark);
+            box-shadow: 0 10px 25px var(--border-glow);
+        }
+
+        /* ==========================
+   MOBILE
+========================== */
+
+        @media(max-width:991px) {
+
+            .about-title {
+                font-size: 32px;
+            }
+
+            .about-image img {
+                height: 320px;
+            }
+        }
+
+        @media(max-width:768px) {
+
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-title {
+                font-size: 28px;
+            }
+
+            .about-text {
+                font-size: 15px;
+            }
+        }
+
+        /* =========================
+   TECH STACK SECTION
+========================= */
+
+        .tech-stack-section {
+            padding: 60px 0;
+            background: var(--bg-dark);
+            overflow: hidden;
+        }
+
+        .tech-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .tech-heading span {
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        .tech-heading h2 {
+            margin-top: 10px;
+            font-size: 34px;
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        /* SLIDER */
+
+        .tech-slider {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .tech-track {
+            display: flex;
+            gap: 18px;
+            width: max-content;
+            animation: techScroll 22s linear infinite;
+        }
+
+        /* CARD */
+
+        .tech-card {
+            width: 120px;
+            height: 95px;
+
+            background: var(--bg-card);
+            border: 1px solid rgba(99, 242, 244, .20);
+
+            border-radius: 16px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            transition: .3s;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+        }
+
+        .tech-card:hover {
+            transform: translateY(-6px);
+
+            border-color: var(--accent);
+
+            box-shadow:
+                0 10px 25px rgba(99, 242, 244, .25);
+        }
+
+        .tech-card img {
+            height: 38px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .tech-card p {
+            margin-top: 8px;
+            margin-bottom: 0;
+
+            font-size: 13px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        /* ANIMATION */
+
+        @keyframes techScroll {
+
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* MOBILE */
+
+        @media(max-width:768px) {
+
+            .tech-card {
+                width: 100px;
+                height: 85px;
+            }
+
+            .tech-card img {
+                height: 32px;
+            }
+
+            .tech-heading h2 {
+                font-size: 26px;
+            }
+
+        }
+
+        /* cources section and testomonial and festivals css */
+        /* =========================================================
+   EXPLORE COURSES SECTION
+========================================================= */
+
+        .course-section {
+            background: var(--bg-darker);
+            padding: 80px 0 40px;
+        }
+
+        .course-heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .course-heading h2 {
+            font-size: 36px;
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        .course-heading h2 span {
+            color: var(--accent);
+        }
+
+        .course-heading p {
+            color: var(--text-muted);
+            font-size: 15px;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto 30px;
+            padding: 0 20px;
+        }
+
+        .course-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, .08);
+            border-radius: 18px;
+            overflow: hidden;
+            transition: .3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent);
+            box-shadow: 0 15px 30px rgba(99, 242, 244, .18);
+        }
+
+        .course-image {
+            position: relative;
+        }
+
+        .course-image img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .badge-best {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: var(--bg-dark);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+
+        .badge-rating {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, .65);
+            color: #facc15;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+
+        .img-enrolled {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, .65);
+            color: #fff;
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+
+        .course-body {
+            padding: 18px 20px 22px;
+        }
+
+        .course-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 6px;
+        }
+
+        .course-desc {
+            color: var(--text-muted);
+            font-size: 13.5px;
+            margin-bottom: 16px;
+        }
+
+        .btn-row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-row .btn {
+            flex: 1;
+            text-align: center;
+            padding: 9px 0;
+            border-radius: 10px;
+            font-size: 13.5px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        .btn-row .btn.enroll {
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: var(--bg-dark);
+        }
+
+        .btn-row .btn.enroll:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px var(--border-glow);
+        }
+
+        .btn-row .btn.details {
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+        }
+
+        .btn-row .btn.details:hover {
+            background: var(--accent);
+            color: var(--bg-dark);
+        }
+
+        .explore-course-wrap {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px 0;
+        }
+
+        .explore-course-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: var(--bg-dark);
+
+            padding: 14px 30px;
+            border-radius: 50px;
+
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 700;
+
+            box-shadow: 0 10px 25px rgba(99, 242, 244, .25);
+            transition: .3s;
+        }
+
+        .explore-course-btn:hover {
+            transform: translateY(-3px);
+            color: var(--bg-dark);
+            box-shadow: 0 15px 30px rgba(99, 242, 244, .35);
+        }
+
+        .explore-course-btn i {
+            transition: .3s;
+        }
+
+        .explore-course-btn:hover i {
+            transform: translateX(5px);
+        }
+
+        /* MOBILE */
+
+        @media(max-width:991px) {
+            .course-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width:768px) {
+
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .explore-course-wrap h3 {
+                font-size: 24px;
+            }
+
+            .explore-course-btn {
+                padding: 12px 24px;
+                font-size: 14px;
+            }
+
+        }
+
+        /* style testimonial section from here */
+        .testimonial-section {
+            padding: 70px 0;
+            background: var(--bg-dark);
+            font-family: Arial, sans-serif;
+        }
+
+        .testimonial-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .testimonial-title h2 {
+            font-size: 32px;
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        .testimonial-title p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* CARD */
+        .testimonial-item {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, .08);
+            padding: 22px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+            text-align: center;
+            margin: 10px;
+            transition: 0.3s;
+        }
+
+        .testimonial-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 40px rgba(99, 242, 244, 0.18);
+        }
+
+        /*  FIXED AVATAR WRAPPER  */
+        .avatar {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 12px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--accent);
+            box-shadow: 0 6px 15px rgba(99, 242, 244, .25);
+        }
+
+        .avatar img {
+            width: 90%;
+            height: 140%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        /* NAME */
+        .testimonial-item h5 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: #ffffff;
+        }
+
+        /* TEXT */
+        .quote {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* BADGE */
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: var(--bg-dark);
+            font-size: 11px;
+            padding: 4px 10px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        /* 
+festival photos */
+
+        /* HEADER */
+        .festival-section {
+            background: var(--bg-darker);
+            padding: 70px 0;
+        }
+
+        .festival-title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .festival-title h2 {
+            font-size: 32px;
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        .festival-title p {
+            font-size: 14px;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: auto;
+        }
+
+        /* SLIDER CARD */
+        .festival-item {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            position: relative;
+            transition: 0.3s;
+            border: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .festival-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: 0.4s;
+        }
+
+        .festival-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .festival-item:hover {
+            border-color: var(--accent);
+        }
+
+        /* OVERLAY */
+        .festival-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 12px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+            color: #fff;
+        }
+
+        .festival-overlay h5 {
+            margin: 0;
+            font-size: 15px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .festival-overlay p {
+            margin: 0;
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        /* footer  starts from hereee*/
+
+        /* =========================
+   FOOTER
+========================= */
+        /* =========================
+   FOOTER
+========================= */
+
+        .footer {
+            background: #0B0F17;
+            color: #fff;
+            padding: 35px 0 0;
+            margin-top: 60px;
+            width: 100%;
+        }
+
+        .footer-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* GRID */
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            align-items: start;
+            padding-bottom: 25px;
+        }
+
+        /* LOGO */
+        .footer-logo {
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .footer-logo span {
+            color: #63F2F4;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand img {
+            height: 55px;
+            width: auto;
+        }
+
+        /* DESCRIPTION */
+        .footer-desc {
+            color: #94a3b8;
+            font-size: 14px;
+            line-height: 1.7;
+            max-width: 500px;
+            margin-bottom: 18px;
+        }
+
+        /* TITLE */
+        .footer-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 18px;
+            color: #fff;
+        }
+
+        /* CONTACT */
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #cbd5e1;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .contact-item i {
+            color: #63F2F4;
+            width: 18px;
+        }
+
+        /* SOCIAL */
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-icons a {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, .06);
+            color: #fff;
+            transition: .3s;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            background: #63F2F4;
+            color: #0B0F17;
+            transform: translateY(-3px);
+        }
+
+        /* BOTTOM */
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, .08);
+            text-align: center;
+            padding: 15px 0;
+            font-size: 13px;
+            color: #94a3b8;
+        }
+
+        /* MOBILE */
+        @media(max-width:768px) {
+            .footer {
+                padding-top: 25px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                text-align: center;
+            }
+
+            .footer-desc {
+                margin: auto auto 18px;
+            }
+
+            .contact-item {
+                justify-content: center;
+            }
+
+            .social-icons {
+                justify-content: center;
+            }
+        }
+
+        /* =========================================================
+   NAVBAR (dark, glowing logo, gradient Enroll button)
+========================================================= */
+        .
+        /* =========================
+   EPSILON NAVBAR
+========================= */
+
+        .navbar {
+            background: rgba(11, 15, 23, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, .25);
+            height: 75px;
+            padding: 0;
+            z-index: 999;
+        }
+
+
+        /* LOGO */
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            height: 75px;
+        }
+
+        .navbar-brand img {
+            height: 90px;
+            width: auto;
+            margin-top: -8px;
+            margin-bottom: -8px;
+        }
+
+        .navbar-brand span {
+            font-size: 20px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: .5px;
+        }
+
+        .navbar-brand span span {
+            color: #63F2F4 !important;
+        }
+
+        /* Links */
+
+        .navbar-nav {
+            gap: 20px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #dbe4ee !important;
+            font-size: 15px;
+            font-weight: 500;
+            position: relative;
+            transition: .3s;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: #63F2F4 !important;
+        }
+
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 2px;
+            background: #63F2F4;
+            transition: .3s;
+        }
+
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after {
+            width: 100%;
+        }
+
+        /* Button */
+
+        .enroll-btn {
+            background: #63F2F4;
+            color: #0B0F17;
+            padding: 8px 18px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: .3s;
+        }
+
+        .enroll-btn:hover {
+            transform: translateY(-2px);
+            color: #0B0F17;
+            box-shadow: 0 0 20px rgba(99, 242, 244, .4);
+        }
+
+        /* Toggle Button */
+
+        .navbar-toggler {
+            border: 1px solid #63F2F4;
+            padding: 6px 10px;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        /* Cyan Hamburger */
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(99,242,244,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        .navbar .container-fluid {
+            flex-wrap: nowrap;
+        }
+
+        .navbar-toggler {
+            margin-left: auto;
+        }
+
+        .navbar-collapse {
+            flex-basis: 100%;
+        }
+
+        /* ==========================
+   1280px
+========================== */
+
+        @media (max-width: 1280px) {
+
+            .navbar-brand img {
+                height: 85px;
+            }
+
+            .navbar-brand span {
+                font-size: 18px;
+            }
+
+            .navbar-nav {
+                gap: 15px;
+            }
+
+            .navbar-nav .nav-link {
+                font-size: 14px;
+            }
+        }
+
+        /* ==========================
+   1024px
+========================== */
+
+        @media (max-width: 1024px) {
+
+            .navbar {
+                height: 70px;
+            }
+
+            .navbar-brand {
+                height: 70px;
+            }
+
+            .navbar-brand img {
+                height: 80px;
+            }
+
+            .navbar-brand span {
+                font-size: 17px;
+            }
+
+            .navbar-nav {
+                gap: 12px;
+            }
+
+            .navbar-nav .nav-link {
+                font-size: 14px;
+            }
+
+            .enroll-btn {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+        }
+
+        /* ==========================
+   800px
+========================== */
+
+        @media (max-width: 800px) {
+
+            .navbar {
+                height: auto;
+                padding: 10px 0;
+            }
+
+            .navbar-brand {
+                height: auto;
+            }
+
+            .navbar-brand img {
+                height: 70px;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            .navbar-brand span {
+                font-size: 16px;
+            }
+
+            .navbar-collapse {
+                background: #121a2a;
+                margin-top: 12px;
+                border-radius: 15px;
+                padding: 15px;
+                border: 1px solid rgba(99, 242, 244, .15);
+            }
+
+            .navbar-nav {
+                gap: 8px;
+                text-align: center;
+            }
+
+            .navbar-nav .nav-link {
+                padding: 10px 0;
+                font-size: 15px;
+            }
+
+            .navbar-nav .nav-link::after {
+                display: none;
+            }
+
+            .enroll-btn {
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
+
+        /* ==========================
+   500px
+========================== */
+
+        @media (max-width: 500px) {
+
+            .navbar {
+                padding: 8px 0;
+            }
+
+            .navbar-brand img {
+                height: 60px;
+            }
+
+            .navbar-brand span {
+                font-size: 14px;
+                letter-spacing: 0;
+            }
+
+            .navbar-toggler {
+                padding: 5px 8px;
+            }
+
+            .navbar-collapse {
+                padding: 12px;
+                border-radius: 12px;
+            }
+
+            .navbar-nav .nav-link {
+                font-size: 14px;
+                padding: 8px 0;
+            }
+
+            .enroll-btn {
+                width: 100%;
+                padding: 10px;
+                font-size: 14px;
+                margin-top: 8px;
+            }
+        }
+
+        /* MOBILE FIX */
+
+        @media (max-width: 991px) {
+
+            .navbar {
+                height: auto;
+            }
+
+            .navbar-brand {
+                max-width: 70%;
+            }
+
+            .navbar-toggler {
+                margin-left: auto;
+            }
+        }
+
+        /* =========================================================
+   HERO / CAROUSEL (dark overlay, glow text)
+========================================================= */
+        .hero-slide {
+            position: relative;
+            width: 100%;
+            min-height: 560px;
+            background: var(--bg-dark);
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-slide img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .18;
+        }
+
+        .hero-overlay {
+            position: relative;
+            width: 100%;
+            background: linear-gradient(180deg, rgba(11, 15, 23, .4), rgba(11, 15, 23, .95));
+            padding: 90px 0;
+        }
+
+        .hero-content {
+            max-width: 760px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero-tag {
+            color: var(--accent);
+            font-weight: 700;
+            letter-spacing: 3px;
+            font-size: 13px;
+            margin-bottom: 18px;
+        }
+
+        .hero-title {
+            color: #ffffff;
+            font-size: 46px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-text {
+            color: var(--text-muted);
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary-custom {
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: var(--bg-dark);
+            font-weight: 700;
+            padding: 13px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 22px var(--border-glow);
+            color: var(--bg-dark);
+        }
+
+        .btn-outline-custom {
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            font-weight: 700;
+            padding: 13px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        .btn-outline-custom:hover {
+            background: var(--accent);
+            color: var(--bg-dark);
+        }
+
+        .owl-dots {
+            text-align: center;
+            margin-top: -10px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .owl-dot span {
+            background: rgba(255, 255, 255, .3) !important;
+        }
+
+        .owl-dot.active span {
+            background: var(--accent) !important;
+        }
+
+        /* BACKDROP */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+
+            justify-content: center;
+            align-items: center;
+
+            z-index: 9999;
+        }
+
+        /* BOX */
+        .modal-content {
+            background: #121a2a;
+            padding: 25px;
+            border-radius: 15px;
+            width: 320px;
+
+            box-shadow: 0 0 25px rgba(0, 229, 255, 0.3);
+
+            text-align: center;
+            position: relative;
+        }
+
+        /* CLOSE BUTTON */
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 22px;
+            cursor: pointer;
+            color: white;
+        }
+
+        /* INPUTS */
+        .modal-content input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+
+            border: none;
+            border-radius: 8px;
+        }
+
+        /* BUTTON */
+        .modal-content button {
+            width: 100%;
+            padding: 10px;
+
+            background: var(--accent);
+            border: none;
+            border-radius: 8px;
+
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* SUCCESS MESSAGE */
+        #successMsg {
+            color: #00ff88;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        .courseName {
+            color: white;
+        }
+
+        /* details modal dark */
+        .details-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .7);
+            backdrop-filter: blur(5px);
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .details-content {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, .08);
+            padding: 30px;
+            border-radius: 16px;
+            width: 380px;
+            max-height: 80vh;
+            overflow-y: auto;
+            color: #e2e8f0;
+            position: relative;
+            box-shadow: 0 0 30px rgba(99, 242, 244, .2);
+        }
+
+        .details-content h2 {
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .details-content h4 {
+            color: var(--accent);
+            font-size: 14px;
+            margin: 14px 0 4px;
+        }
+
+        .details-content p {
+            color: var(--text-muted);
+            font-size: 13.5px;
+            line-height: 1.6;
+        }
+
+        .close-details {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            font-size: 22px;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        /* enroll modal card dark */
+        .enroll-modal-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, .08);
+            padding: 25px;
+            border-radius: 16px;
+            width: 320px;
+            box-shadow: 0 0 25px rgba(99, 242, 244, .2);
+            position: relative;
+            color: #fff;
+        }
+
+        .enroll-modal-card input,
+        .enroll-modal-card textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid rgba(255, 255, 255, .1);
+            border-radius: 8px;
+            background: #0e1420;
+            color: #fff;
+        }
+
+        .enroll-modal-card .send-btn {
+            width: 100%;
+            padding: 11px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            color: var(--bg-dark);
+            cursor: pointer;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 22px;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .enroll-modal-note {
+            font-size: 11.5px;
+            color: var(--text-muted);
+            margin-top: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+        style="background:#0B0F17;">
+        <div class="spinner-border text-info" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid d-flex align-items-center">
+
+            <!-- LEFT SIDE: Logo + Text -->
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <img src="img/eps_logo.png" alt="logo">
+                <span>
+                    EPSILON <span style="color:#63F2F4;">CODER'S HUB</span>
+                </span>
+            </a>
+
+            <!-- RIGHT SIDE: HAMBURGER -->
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- MENU -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+
+                <div class="navbar-nav mx-auto">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="courses.html" class="nav-link">Courses</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="workshop.html" class="nav-link ">Workshop</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+
+                <a href="contact.html" class="enroll-btn ms-lg-3">
+                    Enroll Now
+                </a>
+
+            </div>
+
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5">
+
+        <div class="owl-carousel header-carousel">
+
+            <!-- SLIDE 1 -->
+            <div class="hero-slide">
+
+                <img src="img/favicon.ico" alt="Epsilon Logo">
+
+                <div class="hero-overlay">
+
+                    <div class="hero-content">
+
+                        <div class="hero-tag">
+                            EPSILON CODER'S HUB
+                        </div>
+
+                        <h1 class="hero-title">
+                            Build Skills That Shape The Future.
+                        </h1>
+
+                        <p class="hero-text">
+                            Master Programming, Web Development, Java, Python and
+                            Industry-Oriented Technologies through practical training
+                            and real-world projects.
+                        </p>
+
+                        <div class="hero-buttons">
+
+                            <a href="courses.html" class="btn-primary-custom">
+                                Explore Courses
+                            </a>
+
+                            <a href="contact.html" class="btn-outline-custom">
+                                Enroll Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- SLIDE 2 -->
+            <div class="hero-slide">
+
+                <img src="img/crs-15.png" alt="Epsilon Logo">
+
+                <div class="hero-overlay">
+
+                    <div class="hero-content">
+
+                        <div class="hero-tag">
+                            Where Passion Meets Innovation
+                        </div>
+
+                        <h1 class="hero-title">
+                            Transform Your Potential Into Professional Success.
+                        </h1>
+
+                        <p class="hero-text">
+                            Learn from experienced mentors, work on live projects,
+                            strengthen your coding skills and prepare yourself for
+                            future career opportunities.
+                        </p>
+
+                        <div class="hero-buttons">
+
+                            <a href="courses.html" class="btn-primary-custom">
+                                View Courses
+                            </a>
+
+                            <a href="contact.html" class="btn-outline-custom">
+                                Join Today
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Carousel End -->
+
+
+    <!-- Service Start -->
+    <!-- WHY CHOOSE US START -->
+    <!-- ==========================
+     WHY CHOOSE EPSILON START
+=========================== -->
+    <div class="why-epsilon-section">
+        <div class="container py-5">
+
+            <div class="text-center mb-5">
+
+                <span class="section-badge">
+                    WHY EPSILON?
+                </span>
+
+                <h2 class="section-heading">
+                    Everything You Need To<br>Become <span class="highlight">Industry Ready</span>
+                </h2>
+
+                <p class="section-subtitle">
+                    Learn from experienced mentors, work on real-world projects,
+                    gain practical knowledge and build the skills required to
+                    succeed in today's technology-driven world.
+                </p>
+
+            </div>
+
+            <div class="row g-4">
+
+                <!-- CARD 1 -->
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="epsilon-card">
+
+                        <div class="icon-box">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+
+                        <h5>Expert Mentors</h5>
+
+                        <p>
+                            Learn from experienced professionals who provide
+                            personalized guidance, practical knowledge and
+                            industry insights throughout your learning journey.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="epsilon-card">
+
+                        <div class="icon-box">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+
+                        <h5>Practical Learning</h5>
+
+                        <p>
+                            Hands-on classroom training with coding exercises,
+                            doubt-solving sessions and real-time interaction
+                            with mentors.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="epsilon-card">
+
+                        <div class="icon-box">
+                            <i class="fas fa-code"></i>
+                        </div>
+
+                        <h5>Live Industry Projects</h5>
+
+                        <p>
+                            Work on real-world projects that strengthen your
+                            technical skills and help you build a professional
+                            portfolio.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="epsilon-card">
+
+                        <div class="icon-box">
+                            <i class="fas fa-award"></i>
+                        </div>
+
+                        <h5>Certification Support</h5>
+
+                        <p>
+                            Receive recognized certificates upon successful
+                            completion of training programs and project work.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- ==========================
+     WHY CHOOSE EPSILON END
+=========================== -->
+    <!-- WHY CHOOSE US END -->
+    <!-- Service End -->
+
+
+    <!-- About Start -->
+    <!-- =========================
+     ABOUT EPSILON SECTION
+========================= -->
+    <section class="about-section">
+
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+                <!-- IMAGE -->
+                <div class="col-lg-5">
+
+                    <div class="about-image">
+
+                        <img src="img/institute1.jpg" alt="Epsilon Coder's Hub">
+
+                        <div class="about-badge">
+                            🚀 Learn • Build • Grow
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- CONTENT -->
+                <div class="col-lg-7">
+
+                    <span class="about-tag">
+                        ABOUT EPSILON CODER'S HUB
+                    </span>
+
+                    <h2 class="about-title">
+                        Build Your Future With Industry-Ready Skills
+                    </h2>
+
+                    <p class="about-text">
+                        At Epsilon Coder's Hub, we focus on practical and career-oriented
+                        education. Our mission is to transform students into skilled
+                        professionals through hands-on training, live projects and expert mentorship.
+                    </p>
+
+                    <div class="course-grid" style="grid-template-columns:1fr 1fr;">
+
+                        <div class="course-item">
+                            <i class="fas fa-code"></i>
+                            C & C++
+                        </div>
+
+                        <div class="course-item">
+                            <i class="fab fa-java"></i>
+                            Full Stack Java
+                        </div>
+
+                        <div class="course-item">
+                            <i class="fas fa-globe"></i>
+                            Web Development
+                        </div>
+
+                        <div class="course-item">
+                            <i class="fab fa-python"></i>
+                            Python Programming
+                        </div>
+
+                        <div class="course-item">
+                            <i class="fas fa-chart-line"></i>
+                            Data Science
+                        </div>
+
+                        <div class="course-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            App Development
+                        </div>
+
+                        <div class="course-item">
+                            <i class="fas fa-user-graduate"></i>
+                            BCA Training
+                        </div>
+
+                        <div class="course-item">
+                            <i class="fas fa-laptop-code"></i>
+                            BSc IT / CS Support
+                        </div>
+
+                        <div class="course-item">
+                            <i class="fas fa-layer-group"></i>
+                            MERN Stack
+                        </div>
+
+                    </div>
+
+                    <p class="about-note">
+                        We also support academic students with syllabus guidance,
+                        exam preparation, project development and practical coding
+                        skills to boost confidence and career readiness.
+                    </p>
+
+                    <a href="courses.html" class="about-btn">
+                        Explore Courses
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- About End -->
+    <!-- TECH STACK START -->
+
+    <section class="tech-stack-section">
+
+        <div class="tech-heading">
+            <span>TECH STACK WE TEACH</span>
+            <h2>Technologies You'll Master</h2>
+        </div>
+
+        <div class="tech-slider">
+
+            <div class="tech-track">
+
+                <!-- ROW 1 -->
+                <div class="tech-card">
+                    <img src="img/c.jpg" alt="">
+                    <p>C</p>
+                </div>
+                <div class="tech-card">
+                    <img src="img/c++.jpg" alt="">
+                    <p>C++</p>
+                </div>
+                <div class="tech-card">
+                    <img src="img/java.jpg" alt="">
+                    <p>Java</p>
+                </div>
+
+
+
+                <div class="tech-card">
+                    <img src="img/python.jpg" alt="">
+                    <p>Python</p>
+                </div>
+
+                <div class="tech-card">
+                    <img src="img/react.jpg" alt="">
+                    <p>React</p>
+                </div>
+
+                <div class="tech-card">
+                    <img src="img/html.jpg" alt="">
+                    <p>HTML5</p>
+                </div>
+
+                <div class="tech-card">
+                    <img src="img/css.jpg" alt="">
+                    <p>CSS3</p>
+                </div>
+
+                <div class="tech-card">
+                    <img src="img/javascript.jpg" alt="">
+                    <p>JavaScript</p>
+                </div>
+
+                <div class="tech-card">
+                    <img src="img/mysql.jpg" alt="">
+                    <p>MySQL</p>
+                </div>
+
+                <!-- DUPLICATE FOR SMOOTH LOOP -->
+                <div class="tech-card">
+                    <img src="img/c.jpg" alt="">
+                    <p>C</p>
+                </div>
+                <div class="tech-card">
+                    <img src="img/c++.jpg" alt="">
+                    <p>C++</p>
+                </div>
+                <div class="tech-card">
+                    <img src="img/java.jpg" alt="">
+                    <p>Java</p>
+                </div>
+
+
+
+                <div class="tech-card">
+                    <img src="img/python.jpg" alt="">
+                    <p>Python</p>
+                </div>
+
+                <div class="tech-card">
+                    <img src="img/react.jpg" alt="">
+                    <p>React</p>
+                </div>
+
+                <div class="tech-card">
+                    <img src="img/html.jpg" alt="">
+                    <p>HTML5</p>
+                </div>
+
+                <div class="tech-card">
+                    <img src="img/css.jpg" alt="">
+                    <p>CSS3</p>
+                </div>
+
+                <div class="tech-card">
+                    <img src="img/javascript.jpg" alt="">
+                    <p>JavaScript</p>
+                </div>
+
+                <div class="tech-card">
+                    <img src="img/mysql.jpg" alt="">
+                    <p>MySQL</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- TECH STACK END -->
+    <!-- course card starts -->
+
+    <!-- ─── SECTION ─────────────────────────────── -->
+    <div class="course-section">
+
+        <div class="course-heading">
+            <h2>Our <span>Premium Courses</span></h2>
+            <p>Industry-ready training with practical learning & real projects</p>
+        </div>
+
+        <div class="course-grid">
+
+            <!-- 1)c & c++ card -->
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="img/Crs-1.jpg" alt="C & C++ Programming">
+                    <div class="badge-best">BESTSELLER</div>
+                    <div class="badge-rating">★ 4.8</div>
+
+                </div>
+                <div class="course-body">
+                    <div class="course-title">C & C++ Programming</div>
+                    <div class="course-desc">Basic programming with C and C++</div>
+
+                    <div class="btn-row">
+                        <a href="javascript:void(0)" class="btn enroll"
+                            onclick="openEnrollModal('C & C++ Programming')">Enroll</a>
+                        <a href="#" class="btn details" onclick="openDetailsModal(
+        'C &amp; C++ Programming',
+        'Learn C fundamentals, C++ OOP, Data Structures, and problem-solving with real-world coding practice',
+        '3 Months',
+        '₹2999',
+        'C Basics (syntax, loops, functions, arrays), Pointers, Memory Management, Structures, C++ OOP (classes, objects, inheritance, polymorphism), STL basics, Problem Solving, DSA fundamentals, Mini Projects',
+        'Software Developer, C/C++ Programmer, Backend Developer, Game Developer (Basics), Problem Solving Engineer'
+      )">Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 2 python-->
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="img/Crs-4.webp" alt="Python AI / ML">
+                    <div class="badge-best">BESTSELLER</div>
+                    <div class="badge-rating">★ 4.9</div>
+
+                </div>
+                <div class="course-body">
+                    <div class="course-title">Python AI / ML</div>
+                    <div class="course-desc">Python, Data Science, AI Models</div>
+
+                    <div class="btn-row">
+                        <a href="javascript:void(0)" class="btn enroll"
+                            onclick="openEnrollModal('Python AI / ML Development')">Enroll</a>
+                        <a href="#" class="btn details" onclick="openDetailsModal(
+        'Python AI / ML Development',
+        'Python, Artificial Intelligence, Machine Learning, Data Science with real-world projects',
+        '6 Months',
+        '₹9999',
+        'Python Programming, Data Analysis, NumPy, Pandas, Data Visualization, Machine Learning, Deep Learning Basics, AI Concepts, Model Building, Project Development, Deployment',
+        'Python Developer, AI Engineer, Machine Learning Engineer, Data Analyst, Data Scientist, AI Research Assistant, Freelancer'
+      )">Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 2 — java -->
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="img/javaprogramming.jpg" alt="Java Programming">
+                    <div class="badge-best">BESTSELLER</div>
+                    <div class="badge-rating">★ 4.8</div>
+
+                </div>
+                <div class="course-body">
+                    <div class="course-title">Java Programming</div>
+                    <div class="course-desc">Core Java, OOP, Spring Boot & Projects</div>
+
+                    <div class="btn-row">
+                        <a href="javascript:void(0)" class="btn enroll"
+                            onclick="openEnrollModal('Java Programming')">Enroll</a>
+                        <a href="#" class="btn details" onclick="openDetailsModal(
+        'Java Programming',
+        'Core Java, Object-Oriented Programming, Spring Boot, and real-world backend projects',
+        '4 Months',
+        '₹5999',
+        'Java Basics, OOP Concepts, Exception Handling, Collections Framework, File I/O, JDBC, Multithreading, Spring Boot, REST APIs, Maven, Git & GitHub, Mini Projects',
+        'Java Developer, Backend Developer, Software Engineer, Android Developer (Basics), Full Stack Developer, Freelancer'
+      )">Details</a>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 4full stack  -->
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="img/Crs-8.jpeg" alt="Full Stack Java">
+                    <div class="badge-best">BESTSELLER</div>
+                    <div class="badge-rating">★ 4.9</div>
+
+                </div>
+                <div class="course-body">
+                    <div class="course-title">Full Stack Java</div>
+                    <div class="course-desc">Core Java, Spring Boot, APIs</div>
+
+                    <div class="btn-row">
+                        <a href="javascript:void(0)" class="btn enroll"
+                            onclick="openEnrollModal('Full Stack Java Development')">Enroll</a>
+                        <a href="#" class="btn details" onclick="openDetailsModal(
+        'Full Stack Java Development',
+        'Java, Spring Boot, MySQL, React with industry-level projects',
+        '6 Months',
+        '₹8999',
+        'Core Java, Advanced Java, JDBC, Servlets, Spring Boot, Hibernate, MySQL, REST APIs, React.js, Git &amp; GitHub, Project Development, Deployment',
+        'Java Developer, Full Stack Java Developer, Backend Developer, Software Engineer, Application Developer'
+      )">Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 5 python full stack -->
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="img/pythonfullstack.jpg" alt="Python Full Stack">
+                    <div class="badge-best">BESTSELLER</div>
+                    <div class="badge-rating">★ 4.9</div>
+
+                </div>
+                <div class="course-body">
+                    <div class="course-title">Python Full Stack</div>
+                    <div class="course-desc">Python, Django, React & Real Projects</div>
+                    <div class="btn-row">
+                        <a href="javascript:void(0)" class="btn enroll"
+                            onclick="openEnrollModal('Python Full Stack Development')">Enroll</a>
+                        <a href="#" class="btn details" onclick="openDetailsModal(
+        'Python Full Stack Development',
+        'Python, Django, React, PostgreSQL with industry-level real-world projects',
+        '6 Months',
+        '₹8999',
+        'Python Basics, OOP, Django Framework, Django REST Framework, PostgreSQL, React.js, HTML & CSS, REST APIs, Authentication, Git & GitHub, Deployment, Real-World Projects, Portfolio Building',
+        'Python Developer, Full Stack Developer, Backend Developer, Django Developer, Web Application Developer, Freelancer'
+      )">Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 6: MERN Stack -->
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="img/crs-12.jpeg" alt="MERN Stack Development">
+                    <div class="badge-best">BESTSELLER</div>
+                    <div class="badge-rating">★ 4.9</div>
+
+                </div>
+                <div class="course-body">
+                    <div class="course-title">MERN Stack Development</div>
+                    <div class="course-desc">MongoDB, Express.js, React.js, Node.js</div>
+
+                    <div class="btn-row">
+                        <a href="javascript:void(0)" class="btn enroll"
+                            onclick="openEnrollModal('MERN Stack Development')">Enroll</a>
+                        <a href="#" class="btn details" onclick="openDetailsModal(
+        'MERN Stack Development',
+        'MongoDB, Express.js, React.js, Node.js with real-world projects',
+        '6 Months',
+        '₹8999',
+        'MongoDB, Express.js, React.js, Node.js, REST APIs, Authentication &amp; Authorization, Database Management, Redux, JWT, CRUD Operations, Git &amp; GitHub, Deployment, Real-World Projects, Portfolio Building',
+        'MERN Stack Developer, Full Stack Developer, Backend Developer, Frontend Developer, Web Application Developer, Freelancer'
+      )">Details</a>
+                    </div>
+                </div>
+            </div>
+            <!-- card 7 SQL -->
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="img/Crs-10.jpeg" alt="SQL & Database Management">
+                    <div class="badge-best">TRENDING</div>
+                    <div class="badge-rating">★ 4.7</div>
+
+                </div>
+                <div class="course-body">
+                    <div class="course-title">SQL & Database Management</div>
+                    <div class="course-desc">Database querying and management</div>
+                    <div class="btn-row">
+                        <a href="javascript:void(0)" class="btn enroll"
+                            onclick="openEnrollModal('SQL & Database Management')">Enroll</a>
+                        <a href="#" class="btn details" onclick="openDetailsModal(
+        'SQL &amp; Database Management',
+        'Learn SQL from basics to advanced with real database querying and hands-on practice',
+        '1.5 Months',
+        '₹1999',
+        'SQL Basics (SELECT, INSERT, UPDATE, DELETE), Filtering &amp; Sorting, Joins (INNER, LEFT, RIGHT), Group By &amp; Aggregations, Subqueries, Indexing Basics, Database Design, MySQL/PostgreSQL Practice, Real-World Queries',
+        'Database Developer, SQL Developer, Backend Support Engineer, Data Analyst (Basic), Software Developer'
+      )">Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 8: BCA / MCA / BSc IT -->
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="img/Crs-13.jpeg" alt="BCA / MCA / BSc IT">
+                    <div class="badge-best">POPULAR</div>
+                    <div class="badge-rating">★ 4.9</div>
+
+                </div>
+                <div class="course-body">
+                    <div class="course-title">BCA / MCA / BSc IT</div>
+                    <div class="course-desc">Academic + Practical Coding Support</div>
+
+                    <div class="btn-row">
+                        <a href="javascript:void(0)" class="btn enroll"
+                            onclick="openEnrollModal('BCA / MCA / BSc IT Career Development Program')">Enroll</a>
+                        <a href="#" class="btn details" onclick="openDetailsModal(
+        'BCA / MCA / BSc IT Career Development Program',
+        'Comprehensive academic and industry-oriented training designed for BCA, MCA, and BSc IT students to strengthen technical skills and improve career opportunities',
+        '1 Year',
+        '₹9999',
+        'C Programming, C++, Java, Python, DBMS, SQL, Data Structures, Operating Systems, Computer Networks, HTML, CSS, JavaScript, Web Development, Academic Projects, Major Projects, Practical Lab Support, Viva Preparation, Interview Preparation, Resume Building',
+        'Software Developer, Full Stack Developer, Java Developer, Python Developer, Web Developer, Database Developer, System Analyst, IT Professional'
+      )">Details</a>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 9: BCCA -->
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="img/Crs-14.jpeg" alt="BCCA">
+                    <div class="badge-best">POPULAR</div>
+                    <div class="badge-rating">★ 4.8</div>
+
+                </div>
+                <div class="course-body">
+                    <div class="course-title">BCCA</div>
+                    <div class="course-desc">Academic + Practical Coding Support</div>
+
+                    <div class="btn-row">
+                        <a href="javascript:void(0)" class="btn enroll"
+                            onclick="openEnrollModal('BCCA Professional Training Program')">Enroll</a>
+                        <a href="#" class="btn details" onclick="openDetailsModal(
+        'BCCA Professional Training Program',
+        'Complete academic and practical training specially designed for BCCA students to strengthen programming, project development, and industry-ready skills',
+        '1 Year',
+        '₹9999',
+        'C Programming, C++, Java, Python, DBMS, SQL, Data Structures, Web Development, Mini Projects, Major Projects, Practical Lab Support, Viva Preparation, Academic Guidance, Interview Preparation, Resume Building',
+        'Software Developer, Java Developer, Python Developer, Web Developer, Full Stack Developer, Database Developer, Freelancer'
+      )">Details</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Explore All Courses Button -->
+
+
+        </div>
+        <div class="explore-course-wrap">
+            <a href="courses.html" class="explore-course-btn">
+                Explore All Courses
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+
+
+    </div>
+    <!-- course card ends -->
+    <div class="festival-section">
+
+        <!-- TITLE -->
+        <div class="festival-title">
+            <h2>Our Festival Celebrations 🎉</h2>
+            <p>
+                At Epsilon Coder's Hub, we believe learning is not just coding —
+                we also celebrate culture, joy, and togetherness with our students.
+            </p>
+        </div>
+
+        <div class="container">
+
+            <div class="owl-carousel festival-carousel">
+
+                <!-- ITEM 1 -->
+                <div class="festival-item">
+                    <img src="img/fest1.jpeg" alt="">
+                    <div class="festival-overlay">
+                        <h5>Diwali Celebration</h5>
+                        <p>Students enjoying festival lights & fun activities</p>
+                    </div>
+                </div>
+
+                <!-- ITEM 2 -->
+                <div class="festival-item">
+                    <img src="img/fest2.jpeg" alt="">
+                    <div class="festival-overlay">
+                        <h5>Ganesh Chaturthi</h5>
+                        <p>Traditional celebration with devotion & joy</p>
+                    </div>
+                </div>
+
+                <!-- ITEM 3 -->
+                <div class="festival-item">
+                    <img src="img/fest3.jpeg" alt="">
+                    <div class="festival-overlay">
+                        <h5>Holi Celebration</h5>
+                        <p>Colors, fun and student bonding moments</p>
+                    </div>
+                </div>
+
+                <!-- ITEM 4 -->
+                <div class="festival-item">
+                    <img src="img/fest4.jpeg" alt="">
+                    <div class="festival-overlay">
+                        <h5>Freshers Party</h5>
+                        <p>Welcoming new students with joy & energy</p>
+                    </div>
+                </div>
+
+                <!-- ITEM 5 -->
+                <div class="festival-item">
+                    <img src="img/fest5.jpeg" alt="">
+                    <div class="festival-overlay">
+                        <h5>Annual Function</h5>
+                        <p>Celebrating achievements & memories</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Testimonial Start -->
+    <div class="testimonial-section">
+
+        <!-- TITLE -->
+        <div class="testimonial-title">
+            <h2>What Our Students Say</h2>
+            <p>Real feedback from our trained students</p>
+        </div>
+
+        <div class="container">
+            <div class="owl-carousel testimonial-carousel">
+
+                <!-- CARD 1 -->
+                <div class="testimonial-item">
+                    <span class="badge">⭐⭐⭐⭐⭐ </span>
+
+                    <div class="avatar">
+                        <img src="img/testo1.jpeg" alt="">
+                    </div>
+
+                    <h5>Ritesh Dhakulkar</h5>
+
+                    <div class="quote">
+                        “Great institute with experienced mentors and practical coding training.”
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="testimonial-item">
+                    <span class="badge">⭐⭐⭐⭐</span>
+
+                    <div class="avatar">
+                        <img src="img/User_Icon.png" alt="">
+                    </div>
+
+                    <h5>Nyancy Dupare</h5>
+
+                    <div class="quote">
+                        “Best learning experience. Projects and interview preparation helped a lot.”
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="testimonial-item">
+                    <span class="badge">⭐⭐⭐⭐⭐</span>
+
+                    <div class="avatar">
+                        <img src="img/User_Icon.png" alt="">
+                    </div>
+
+                    <h5>Divya Datake</h5>
+
+                    <div class="quote">
+                        “Excellent teaching style and real-world project exposure.”
+                    </div>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="testimonial-item">
+                    <span class="badge">⭐⭐⭐⭐</span>
+
+                    <div class="avatar">
+                        <img src="img/User_Icon.png" alt="">
+                    </div>
+
+                    <h5>Sonali Meshram</h5>
+
+                    <div class="quote">
+                        “Very supportive trainers and strong placement guidance.”
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+    <!-- Footer Start -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-grid">
+
+                <!-- LEFT SIDE -->
+                <div class="footer-col">
+
+                    <div class="footer-brand">
+                        <img src="img/eps_logo.png" alt="Epsilon Logo">
+                        <h2 class="footer-logo">
+                            EPSILON <span>CODER'S HUB</span>
+                        </h2>
+                    </div>
+                    <p class="footer-desc">
+                        Empowering students with practical coding skills,
+                        live projects, industry-focused training and career
+                        guidance to become future-ready IT professionals.
+                    </p>
+
+                    <div class="social-icons">
+
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/epsiloncoding/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/mehul-ghiya-6b722b58/">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+
+                        <a href="https://www.youtube.com/@Mehulsi" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT SIDE -->
+
+                <div class="footer-col">
+
+                    <h3 class="footer-title">
+                        Get In Touch
+                    </h3>
+
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Nandanvan Canal Road, Nagpur</span>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+91 7709799654</span>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@epsiloncodershub.com</span>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Mon - Sat | 10 AM - 9 PM</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                © 2026 Epsilon Coder's Hub | Learn • Build • Succeed
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".header-carousel").owlCarousel({
+                items: 1,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 4000,
+                autoplayHoverPause: false,
+                smartSpeed: 900,
+                dots: true,
+                nav: false
+            });
+        });
+    </script>
+
+    <!-- ENROLL MODAL -->
+    <div id="enrollModal" class="modal">
+
+        <div class="modal-content">
+
+            <span class="close" onclick="closeEnrollModal()">&times;</span>
+
+            <h2 id="courseName">Enroll Now</h2>
+
+            <form id="enrollForm">
+
+                <input type="text" id="studentName" placeholder="Your Name" required>
+
+                <input type="tel" id="studentMobile" placeholder="Mobile Number" required>
+
+                <input type="hidden" id="selectedCourse">
+
+                <button type="submit">Submit</button>
+
+                <p id="successMsg"></p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script>
+        function openEnrollModal(courseName) {
+            document.getElementById("enrollModal").style.display = "flex";
+            document.getElementById("courseName").innerText = "Enroll: " + courseName;
+            document.getElementById("selectedCourse").value = courseName;
+        }
+
+        function closeEnrollModal() {
+            document.getElementById("enrollModal").style.display = "none";
+            document.getElementById("successMsg").innerText = "";
+        }
+
+        // close when clicking outside box
+        window.onclick = function (event) {
+            let modal = document.getElementById("enrollModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <!-- email.js javascript from here -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <script>
+            (function () {
+                emailjs.init("o3nPOhz1ZhykbARgc");
+            })();
+    </script>
+    <script>
+        document.getElementById("enrollForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            let name = document.getElementById("studentName").value;
+            let mobile = document.getElementById("studentMobile").value;
+            let course = document.getElementById("selectedCourse").value;
+
+            let params = {
+                student_name: name,
+                student_mobile: mobile,
+                course_name: course
+            };
+
+            emailjs.send("service_nqpjxmi", "template_n8cugsi", params)
+                .then(function (response) {
+
+                    document.getElementById("successMsg").innerText =
+                        "We will contact you very soon 👍";
+
+                    document.getElementById("enrollForm").reset();
+
+                    setTimeout(() => {
+                        closeEnrollModal();
+                    }, 2000);
+
+                }, function (error) {
+
+                    console.log("FAILED...", error);
+
+                    document.getElementById("successMsg").innerText =
+                        "Something went wrong. Try again.";
+
+                });
+        });
+        function openDetailsModal(
+            title,
+            description,
+            duration,
+            fees,
+            topics,
+            career
+        ) {
+
+            document.getElementById("modalCourseTitle").innerText = title;
+            document.getElementById("modalCourseDesc").innerText = description;
+            document.getElementById("modalDuration").innerText = duration;
+            document.getElementById("modalFees").innerText = fees;
+            document.getElementById("modalTopics").innerText = topics;
+            document.getElementById("modalCareer").innerText = career;
+
+            document.getElementById("detailsModal").style.display = "flex";
+        }
+
+        function closeDetailsModal() {
+            document.getElementById("detailsModal").style.display = "none";
+        }
+    </script>
+    <!-- COURSE DETAILS MODAL -->
+
+    <div id="detailsModal" class="details-modal">
+
+        <div class="details-content">
+
+            <span class="close-details" onclick="closeDetailsModal()">&times;</span>
+
+            <h2 id="modalCourseTitle"></h2>
+
+            <p id="modalCourseDesc"></p>
+
+            <hr>
+
+            <h4>Duration</h4>
+            <p id="modalDuration"></p>
+
+            <h4>Fees</h4>
+            <p id="modalFees"></p>
+
+            <h4>What You Will Learn</h4>
+            <p id="modalTopics"></p>
+
+            <h4>Career Opportunities</h4>
+            <p id="modalCareer"></p>
+
+        </div>
+
+    </div>
+
+    <script>
+        $('.festival-carousel').owlCarousel({
+            loop: true,
+            margin: 20,
+            autoplay: true,
+            autoplayTimeout: 2500,
+            smartSpeed: 800,
+            responsive: {
+                0: { items: 1 },
+                600: { items: 2 },
+                1000: { items: 3 }
+            }
+        });
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>

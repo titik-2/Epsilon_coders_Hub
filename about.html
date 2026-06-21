@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>EPSILON CODER'S HUB</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="navbar.css">
+    <style>
+        body {
+            background: #0B0F17;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        /* about us styless from here - DARK THEME (matches contact page) */
+
+        /* =========================
+   MENTOR SECTION
+========================= */
+
+        .mentor-section {
+            background: #0B0F17;
+            padding: 100px 0;
+        }
+
+        .mentor-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            transition: all 0.4s ease;
+        }
+
+        .mentor-image img {
+            width: 100%;
+            border-radius: 20px;
+            border: 1px solid rgba(99, 242, 244, .15);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+            transition: all 0.5s ease;
+        }
+
+        .mentor-image:hover {
+            box-shadow: 0 20px 45px rgba(99, 242, 244, 0.25);
+        }
+
+        .mentor-image:hover img {
+            transform: scale(1.06);
+        }
+
+        .mentor-image-badge {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: linear-gradient(135deg, #63F2F4, #00b8ba);
+            color: #0B0F17;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 13px;
+            box-shadow: 0 10px 25px rgba(99, 242, 244, .3);
+        }
+
+        .mentor-badge {
+            background: rgba(99, 242, 244, .12);
+            color: #63F2F4;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: .5px;
+        }
+
+        .mentor-name {
+            font-family: 'Heebo', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            margin-top: 20px;
+            color: #fff;
+        }
+
+        .mentor-exp {
+            color: #63F2F4;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .mentor-desc {
+            color: #94a3b8;
+            line-height: 1.8;
+        }
+
+        .mentor-section .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .mentor-section .feature {
+            background: #111827;
+            border: 1px solid rgba(99, 242, 244, .12);
+            color: #dbe4ee;
+            padding: 12px 16px;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .mentor-section .feature:hover {
+            border-color: #63F2F4;
+            background: rgba(99, 242, 244, .06);
+        }
+
+        .mentor-section .highlight {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .mentor-section .highlight-box {
+            background: #111827;
+            border: 1px solid rgba(99, 242, 244, .15);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            flex: 1;
+            transition: .3s;
+        }
+
+        .mentor-section .highlight-box:hover {
+            border-color: #63F2F4;
+            transform: translateY(-3px);
+        }
+
+        .mentor-section .highlight-box h4 {
+            color: #63F2F4;
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .mentor-section .highlight-box p {
+            margin: 0;
+            color: #94a3b8;
+            font-size: 13px;
+        }
+
+        @media(max-width:768px) {
+            .mentor-name {
+                font-size: 32px;
+            }
+
+            .mentor-section .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .mentor-section .highlight {
+                flex-direction: column;
+            }
+        }
+
+        /* =========================
+   ABOUT SECTION
+========================= */
+
+        .about-section {
+            padding: 80px 0;
+            background: #0B0F17;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .about-tag {
+            background: rgba(99, 242, 244, .12);
+            color: #63F2F4;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: .5px;
+        }
+
+        .about-title {
+            font-family: 'Heebo', sans-serif;
+            font-size: 40px;
+            font-weight: 700;
+            margin: 20px 0;
+            color: #fff;
+        }
+
+        .about-text {
+            font-size: 16px;
+            color: #94a3b8;
+            line-height: 1.8;
+        }
+
+        .feature-list {
+            margin-top: 20px;
+        }
+
+        .feature-list div {
+            margin-bottom: 12px;
+            font-weight: 600;
+            color: #dbe4ee;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 20px;
+            border: 1px solid rgba(99, 242, 244, .15);
+            transition: .3s;
+        }
+
+        .about-image img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 45px rgba(99, 242, 244, .2);
+        }
+
+        .about-section .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .about-section .feature {
+            background: #111827;
+            border: 1px solid rgba(99, 242, 244, .12);
+            padding: 10px 14px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #dbe4ee;
+            transition: 0.3s;
+        }
+
+        .about-section .feature:hover {
+            background: rgba(99, 242, 244, 0.1);
+            transform: translateY(-2px);
+            border-left: 3px solid #63F2F4;
+        }
+
+        .about-section .btn-primary {
+            background: linear-gradient(135deg, #63F2F4, #4DDDE0);
+            border: none;
+            color: #0B0F17;
+            font-weight: 700;
+            padding: 10px 26px;
+            border-radius: 30px;
+            box-shadow: 0 10px 25px rgba(99, 242, 244, .25);
+            transition: .3s;
+        }
+
+        .about-section .btn-primary:hover {
+            transform: translateY(-2px);
+            color: #0B0F17;
+            box-shadow: 0 15px 30px rgba(99, 242, 244, .35);
+        }
+
+        /* =========================
+   WHY CHOOSE EPSILON SECTION
+========================= */
+
+        .why-section {
+            background: #0B0F17;
+            padding: 90px 0;
+        }
+
+        .section-badge {
+            display: inline-block;
+            color: #63F2F4;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .section-heading {
+            font-family: 'Heebo', sans-serif;
+            font-size: 40px;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            max-width: 750px;
+            margin: auto;
+            color: #94a3b8;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .epsilon-card {
+            background: #111827;
+            border: 1px solid rgba(99, 242, 244, .15);
+            border-radius: 20px;
+            padding: 30px 25px;
+            text-align: center;
+            height: 100%;
+            transition: .35s;
+        }
+
+        .epsilon-card:hover {
+            transform: translateY(-8px);
+            border-color: #63F2F4;
+            box-shadow: 0 15px 35px rgba(99, 242, 244, .18);
+        }
+
+        .icon-box {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px;
+            background: rgba(99, 242, 244, .12);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: .35s;
+        }
+
+        .icon-box i {
+            font-size: 30px;
+            color: #63F2F4;
+            transition: .35s;
+        }
+
+        .epsilon-card:hover .icon-box {
+            background: #63F2F4;
+        }
+
+        .epsilon-card:hover .icon-box i {
+            color: #0B0F17;
+        }
+
+        .epsilon-card h5 {
+            font-family: 'Heebo', sans-serif;
+            font-size: 19px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+
+        .epsilon-card p {
+            color: #94a3b8;
+            font-size: 14px;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        @media(max-width:991px) {
+            .section-heading {
+                font-size: 32px;
+            }
+        }
+
+        @media(max-width:768px) {
+            .section-heading {
+                font-size: 26px;
+            }
+
+            .section-subtitle {
+                font-size: 14px;
+            }
+
+            .epsilon-card {
+                padding: 25px 20px;
+            }
+
+            .icon-box {
+                width: 60px;
+                height: 60px;
+            }
+
+            .icon-box i {
+                font-size: 24px;
+            }
+        }
+
+        /* =========================
+   TESTIMONIAL SECTION
+========================= */
+
+        .testimonial-section {
+            padding: 90px 0;
+            background: #0B0F17;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .testimonial-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .testimonial-title h2 {
+            font-family: 'Heebo', sans-serif;
+            font-size: 32px;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .testimonial-title p {
+            font-size: 14px;
+            color: #94a3b8;
+        }
+
+        .testimonial-item {
+            background: #111827;
+            border: 1px solid rgba(99, 242, 244, .12);
+            padding: 22px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+            text-align: center;
+            margin: 10px;
+            transition: 0.3s;
+        }
+
+        .testimonial-item:hover {
+            transform: translateY(-5px);
+            border-color: #63F2F4;
+            box-shadow: 0 20px 40px rgba(99, 242, 244, 0.18);
+        }
+
+        .avatar {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 12px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #63F2F4;
+            box-shadow: 0 6px 15px rgba(99, 242, 244, 0.25);
+        }
+
+        .avatar img {
+            width: 90%;
+            height: 140%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .testimonial-item h5 {
+            font-family: 'Heebo', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: #fff;
+        }
+
+        .quote {
+            font-size: 13px;
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #63F2F4, #00b8ba);
+            color: #0B0F17;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+        }
+
+
+
+        /* footer css start  */
+        /* =========================
+   FOOTER
+========================= */
+
+        .footer {
+            background: #0B0F17;
+            color: #fff;
+            padding: 35px 0 0;
+            margin-top: 60px;
+        }
+
+        .footer-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* GRID */
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            align-items: start;
+            padding-bottom: 25px;
+        }
+
+        /* LOGO */
+
+        .footer-logo {
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .footer-logo span {
+            color: #63F2F4;
+        }
+
+        /* DESCRIPTION */
+
+        .footer-desc {
+            color: #94a3b8;
+            font-size: 14px;
+            line-height: 1.7;
+            max-width: 500px;
+            margin-bottom: 18px;
+        }
+
+        /* TITLE */
+
+        .footer-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 18px;
+            color: #fff;
+        }
+
+        /* CONTACT */
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            color: #cbd5e1;
+
+            margin-bottom: 12px;
+
+            font-size: 14px;
+        }
+
+        .contact-item i {
+            color: #63F2F4;
+            width: 18px;
+        }
+
+        /* SOCIAL */
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-icons a {
+            width: 38px;
+            height: 38px;
+
+            border-radius: 10px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: rgba(255, 255, 255, .06);
+
+            color: #fff;
+
+            transition: .3s;
+
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            background: #63F2F4;
+            color: #0B0F17;
+            transform: translateY(-3px);
+        }
+
+        /* BOTTOM */
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, .08);
+
+            text-align: center;
+
+            padding: 15px 0;
+
+            font-size: 13px;
+
+            color: #94a3b8;
+        }
+
+        /* MOBILE */
+
+        @media(max-width:768px) {
+
+            .footer {
+                padding-top: 25px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                text-align: center;
+            }
+
+            .footer-desc {
+                margin: auto auto 18px;
+            }
+
+            .contact-item {
+                justify-content: center;
+            }
+
+            .social-icons {
+                justify-content: center;
+            }
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand img {
+            height: 55px;
+            width: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid d-flex align-items-center">
+
+            <!-- LEFT SIDE: Logo + Text -->
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <img src="img/eps_logo.png" alt="logo">
+                <span>
+                    EPSILON <span style="color:#63F2F4;">CODER'S HUB</span>
+                </span>
+            </a>
+
+            <!-- RIGHT SIDE: HAMBURGER -->
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- MENU -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+
+                <div class="navbar-nav mx-auto">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link active">About</a>
+                    <a href="courses.html" class="nav-link">Courses</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="workshop.html" class="nav-link ">Workshop</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+
+                <a href="contact.html" class="enroll-btn ms-lg-3">
+                    Enroll Now
+                </a>
+
+            </div>
+
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Navbar End -->
+
+    <!-- about us starts -->
+
+    <section class="mentor-section py-5">
+
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+                <!-- LEFT IMAGE -->
+                <div class="col-lg-5">
+
+                    <div class="mentor-image">
+
+                        <img src="img/mentor1.jpg.jpeg" class="img-fluid" alt="Mehul Ghiya">
+
+                        <div class="mentor-image-badge">
+                            ⭐ 10+ Years Experience
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT CONTENT -->
+                <div class="col-lg-7">
+
+                    <span class="mentor-badge">
+                        FOUNDER & LEAD MENTOR
+                    </span>
+
+                    <h2 class="mentor-name">
+                        Mehul Ghiya
+                    </h2>
+
+                    <div class="mentor-exp">
+                        10+ Years of Teaching & Industry Experience
+                    </div>
+
+                    <p class="mentor-desc">
+                        Mehul Ghiya is an experienced programming mentor and technology educator
+                        with over 10 years of expertise in software development, technical training,
+                        and career mentorship.
+                    </p>
+
+                    <p class="mentor-desc">
+                        He specializes in Java Full Stack Development, Python Programming,
+                        Web Development, AI Tools, Data Science, and project-based learning.
+                    </p>
+
+                    <p class="mentor-desc">
+                        Through Epsilon Coders Hub, he has successfully guided students to
+                        develop practical skills, build live projects, and prepare for
+                        successful careers in the IT industry.
+                    </p>
+
+                    <div class="feature-grid">
+
+                        <div class="feature">
+                            ✔ Real-Time Projects
+                        </div>
+
+                        <div class="feature">
+                            ✔ Career Guidance
+                        </div>
+
+                        <div class="feature">
+                            ✔ Placement Support
+                        </div>
+
+                        <div class="feature">
+                            ✔ Industry-Oriented Training
+                        </div>
+
+                    </div>
+
+                    <div class="highlight">
+
+                        <div class="highlight-box">
+                            <h4>100+</h4>
+                            <p>Students Trained</p>
+                        </div>
+
+                        <div class="highlight-box">
+                            <h4>10+</h4>
+                            <p>Courses</p>
+                        </div>
+
+                        <div class="highlight-box">
+                            <h4>10+</h4>
+                            <p>Years Experience</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!---banner info-->
+    <section class="about-section py-5">
+
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+                <!-- LEFT CONTENT -->
+                <div class="col-lg-6">
+
+                    <span class="about-tag">
+                        ABOUT EPSILON CODER'S HUB
+                    </span>
+
+                    <h2 class="about-title">
+                        Transforming Students Into Industry-Ready Developers
+                    </h2>
+
+                    <p class="about-text">
+                        Epsilon Coder's Hub is a leading IT training institute dedicated
+                        to providing practical and career-focused education in modern
+                        software technologies.
+                    </p>
+
+                    <p class="about-text">
+                        We offer comprehensive training programs designed to help students
+                        master programming, web development, data science, artificial
+                        intelligence, and mobile application development.
+                    </p>
+
+                    <div class="feature-list">
+                        <div>✔ C & C++ Programming</div>
+                        <div>✔ Full Stack Java Development</div>
+                        <div>✔ Full Stack Web Development</div>
+                        <div>✔ Python for AI / ML</div>
+                        <div>✔ Data Science & Analytics</div>
+                        <div>✔ Mobile App Development</div>
+                    </div>
+
+                    <div class="mt-4">
+                        <a href="courses.html" class="btn btn-primary">
+                            Explore Courses
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT IMAGE -->
+                <div class="col-lg-6">
+
+                    <div class="about-image">
+                        <img src="img/banner.jpg.jpeg" class="img-fluid rounded shadow-lg" alt="Epsilon Coders Hub">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- about us ends -->
+
+
+    <!-- Service End --> <!-- Service Start -->
+    <!-- WHY CHOOSE US START -->
+    <!-- ==========================
+     WHY CHOOSE EPSILON START
+=========================== -->
+    <div class="why-section">
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <span class="section-badge">
+                    WHY EPSILON?
+                </span>
+
+                <h2 class="section-heading">
+                    Everything You Need To Become Industry Ready
+                </h2>
+
+                <p class="section-subtitle">
+                    Learn from experienced mentors, work on real-world projects,
+                    gain practical knowledge and build the skills required to
+                    succeed in today's technology-driven world.
+                </p>
+
+            </div>
+
+            <div class="row g-4">
+
+                <!-- CARD 1 -->
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="epsilon-card">
+
+                        <div class="icon-box">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+
+                        <h5>Expert Mentors</h5>
+
+                        <p>
+                            Learn from experienced professionals who provide
+                            personalized guidance, practical knowledge and
+                            industry insights throughout your learning journey.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="epsilon-card">
+
+                        <div class="icon-box">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+
+                        <h5>Practical Learning</h5>
+
+                        <p>
+                            Hands-on classroom training with coding exercises,
+                            doubt-solving sessions and real-time interaction
+                            with mentors.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="epsilon-card">
+
+                        <div class="icon-box">
+                            <i class="fas fa-code"></i>
+                        </div>
+
+                        <h5>Live Industry Projects</h5>
+
+                        <p>
+                            Work on real-world projects that strengthen your
+                            technical skills and help you build a professional
+                            portfolio.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="epsilon-card">
+
+                        <div class="icon-box">
+                            <i class="fas fa-award"></i>
+                        </div>
+
+                        <h5>Certification Support</h5>
+
+                        <p>
+                            Receive recognized certificates upon successful
+                            completion of training programs and project work.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- ==========================
+     WHY CHOOSE EPSILON END
+=========================== -->
+    <!-- WHY CHOOSE US END -->
+    <!-- Service End -->
+
+    <!-- Testimonial Start -->
+    <div class="testimonial-section">
+
+        <!-- TITLE -->
+        <div class="testimonial-title">
+            <h2>What Our Students Say</h2>
+            <p>Real feedback from our trained students</p>
+        </div>
+
+        <div class="container">
+            <div class="owl-carousel testimonial-carousel">
+
+                <!-- CARD 1 -->
+                <div class="testimonial-item">
+                    <span class="badge">⭐⭐⭐⭐⭐</span>
+
+                    <div class="avatar">
+                        <img src="img/testo1.jpeg" alt="">
+                    </div>
+
+                    <h5>Ritesh Dhakulkar</h5>
+
+                    <div class="quote">
+                        “Great institute with experienced mentors and practical coding training.”
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="testimonial-item">
+                    <span class="badge">⭐⭐⭐⭐</span>
+
+                    <div class="avatar">
+                        <img src="img/User_Icon.png" alt="">
+                    </div>
+
+                    <h5>Nyancy Dupare</h5>
+
+                    <div class="quote">
+                        “Best learning experience. Projects and interview preparation helped a lot.”
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="testimonial-item">
+                    <span class="badge">⭐⭐⭐⭐⭐</span>
+
+                    <div class="avatar">
+                        <img src="img/User_Icon.png" alt="">
+                    </div>
+
+                    <h5>Divya Datake</h5>
+
+                    <div class="quote">
+                        “Excellent teaching style and real-world project exposure.”
+                    </div>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="testimonial-item">
+                    <span class="badge">⭐⭐⭐⭐</span>
+
+                    <div class="avatar">
+                        <img src="img/User_Icon.png" alt="">
+                    </div>
+
+                    <h5>Sonali Meshram</h5>
+
+                    <div class="quote">
+                        “Very supportive trainers and strong placement guidance.”
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+    <!-- Footer Start -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-grid">
+
+                <!-- LEFT SIDE -->
+                <div class="footer-col">
+
+                    <div class="footer-brand">
+                        <img src="img/eps_logo.png" alt="Epsilon Logo">
+                        <h2 class="footer-logo">
+                            EPSILON <span>CODER'S HUB</span>
+                        </h2>
+                    </div>
+
+                    <p class="footer-desc">
+                        Empowering students with practical coding skills,
+                        live projects, industry-focused training and career
+                        guidance to become future-ready IT professionals.
+                    </p>
+
+                    <div class="social-icons">
+
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/epsiloncoding/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/mehul-ghiya-6b722b58/">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+
+                        <a href="https://www.youtube.com/@Mehulsi" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT SIDE -->
+
+                <div class="footer-col">
+
+                    <h3 class="footer-title">
+                        Get In Touch
+                    </h3>
+
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Nandanvan Canal Road, Nagpur</span>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+91 7709799654</span>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@epsiloncodershub.com</span>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Mon - Sat | 10 AM - 9 PM</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                © 2026 Epsilon Coder's Hub | Learn • Build • Succeed
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

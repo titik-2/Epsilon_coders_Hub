@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>EPSILON CODER'S HUB</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="navbar.css">
+    <style>
+        /* style for contact */
+        /* ==========================
+   CONTACT SECTION
+========================== */
+        .contact-section {
+            background: #0B0F17;
+            padding: 80px 0;
+        }
+
+        /* LEFT SIDE */
+
+        .contact-tag {
+            color: #63F2F4;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        .contact-left h2 {
+            color: #fff;
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 1.15;
+            margin: 15px 0;
+        }
+
+        .contact-left p {
+            color: #94a3b8;
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
+
+        .contact-info-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 22px;
+        }
+
+        .contact-info-item i {
+            color: #63F2F4;
+            font-size: 20px;
+            margin-top: 4px;
+        }
+
+        .contact-info-item h6 {
+            color: #fff;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .contact-info-item span {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        /* FORM */
+
+        .contact-form-card {
+            background: #111827;
+            border: 1px solid rgba(99, 242, 244, .15);
+            border-radius: 20px;
+            padding: 35px;
+        }
+
+        .contact-form-card h3 {
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .contact-form-card p {
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .contact-form-card input,
+        .contact-form-card textarea {
+            width: 100%;
+            background: #0B0F17;
+            border: 1px solid #1e293b;
+            color: #fff;
+            padding: 14px 16px;
+            border-radius: 12px;
+            margin-bottom: 14px;
+            outline: none;
+        }
+
+        .contact-form-card textarea {
+            min-height: 130px;
+            resize: none;
+        }
+
+        .contact-form-card input:focus,
+        .contact-form-card textarea:focus
+        /* BUTTON */
+
+        .send-btn {
+            width: 100%;
+            border: none;
+            background: #63F2F4;
+            color: #0B0F17;
+            padding: 14px;
+            border-radius: 12px;
+            font-weight: 700;
+            transition: .3s;
+        }
+
+        .send-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* MAP */
+
+        .map-box {
+            margin-top: 35px;
+            height: 220px;
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid rgba(99, 242, 244, .15);
+        }
+
+        .map-box iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* MOBILE */
+
+        @media(max-width:768px) {
+
+
+            .contact-left h2 {
+                font-size: 34px;
+            }
+
+            .contact-form-card {
+                padding: 25px;
+            }
+
+            .map-box {
+                height: 180px;
+            }
+
+
+        }
+
+
+        /* footer css startss */
+        /* =========================
+   FOOTER
+========================= */
+
+        .footer {
+            background: #0B0F17;
+            color: #fff;
+            padding: 35px 0 0;
+            margin-top: 60px;
+            width: 100%;
+        }
+
+        .footer-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* GRID */
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            align-items: start;
+            padding-bottom: 25px;
+        }
+
+        /* LOGO */
+
+        .footer-logo {
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .footer-logo span {
+            color: #63F2F4;
+        }
+
+        /* DESCRIPTION */
+
+        .footer-desc {
+            color: #94a3b8;
+            font-size: 14px;
+            line-height: 1.7;
+            max-width: 500px;
+            margin-bottom: 18px;
+        }
+
+        /* TITLE */
+
+        .footer-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 18px;
+            color: #fff;
+        }
+
+        /* CONTACT */
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            color: #cbd5e1;
+
+            margin-bottom: 12px;
+
+            font-size: 14px;
+        }
+
+        .contact-item i {
+            color: #63F2F4;
+            width: 18px;
+        }
+
+        /* SOCIAL */
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-icons a {
+            width: 38px;
+            height: 38px;
+
+            border-radius: 10px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: rgba(255, 255, 255, .06);
+
+            color: #fff;
+
+            transition: .3s;
+
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            background: #63F2F4;
+            color: #0B0F17;
+            transform: translateY(-3px);
+        }
+
+        /* BOTTOM */
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, .08);
+
+            text-align: center;
+
+            padding: 15px 0;
+
+            font-size: 13px;
+
+            color: #94a3b8;
+        }
+
+        /* MOBILE */
+
+        @media(max-width:768px) {
+
+            .footer {
+                padding-top: 25px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                text-align: center;
+            }
+
+            .footer-desc {
+                margin: auto auto 18px;
+            }
+
+            .contact-item {
+                justify-content: center;
+            }
+
+            .social-icons {
+                justify-content: center;
+            }
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand img {
+            height: 55px;
+            width: auto;
+        }
+
+        .send-btn {
+            width: 100%;
+            height: 55px;
+
+            border: none;
+            outline: none;
+            cursor: pointer;
+
+            background: linear-gradient(135deg,
+                    #63F2F4,
+                    #4DDDE0);
+
+            color: #0B0F17;
+
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+
+            border-radius: 14px;
+
+            transition: .35s ease;
+
+            box-shadow:
+                0 10px 25px rgba(99, 242, 244, .25);
+        }
+
+        /* HOVER */
+
+        .send-btn:hover {
+
+            transform: translateY(-3px);
+
+            .send-btn:hover {
+                box-shadow:
+                    0 0 15px rgba(99, 242, 244, .35),
+                    0 0 30px rgba(99, 242, 244, .25),
+                    0 15px 35px rgba(99, 242, 244, .35);
+
+                transform: translateY(-3px);
+            }
+
+            background:linear-gradient(135deg,
+                #7CF7F9,
+                #63F2F4);
+        }
+
+        /* CLICK EFFECT */
+
+        .send-btn:active {
+            transform: scale(.98);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid d-flex align-items-center">
+
+            <!-- LEFT SIDE: Logo + Text -->
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <img src="img/eps_logo.png" alt="logo">
+                <span>
+                    EPSILON <span style="color:#63F2F4;">CODER'S HUB</span>
+                </span>
+            </a>
+
+            <!-- RIGHT SIDE: HAMBURGER -->
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- MENU -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+
+                <div class="navbar-nav mx-auto">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="courses.html" class="nav-link">Courses</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="workshop.html" class="nav-link ">Workshop</a>
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                </div>
+
+                <a href="contact.html" class="enroll-btn ms-lg-3">
+                    Enroll Now
+                </a>
+
+            </div>
+
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Navbar End -->
+    <!-- Contact Start -->
+    <!-- Contact Start -->
+
+    <div class="contact-section">
+
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+                <!-- LEFT CONTENT -->
+
+                <div class="col-lg-5">
+
+                    <div class="contact-left">
+
+                        <span class="contact-tag">CONTACT US</span>
+
+                        <h2>
+                            Let's Build <br>
+                            Something Amazing
+                        </h2>
+
+                        <p>
+                            Join Epsilon Coder's Hub and start your journey towards
+                            becoming an industry-ready developer through practical
+                            training, live projects and expert mentorship.
+                        </p>
+
+                        <div class="contact-info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h6>Email</h6>
+                                <span>info@epsiloncodershub.com</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h6>Phone</h6>
+                                <span>+91 7709799654</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h6>Location</h6>
+                                <span>Nandanvan Canal Road, Nagpur</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT FORM -->
+
+                <div class="col-lg-7">
+
+                    <div class="contact-form-card">
+
+                        <h3>Send a Message</h3>
+
+                        <p>
+                            Fill out the form and our team will contact you soon.
+                        </p>
+
+                        <form id="contactForm">
+
+                            <input type="text" placeholder="Full Name">
+
+                            <input type="email" placeholder="Email Address">
+
+                            <input type="text" placeholder="Phone Number">
+
+                            <input type="text" placeholder="Subject">
+
+                            <button type="submit" class="send-btn">
+                                SEND MESSAGE
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- MAP -->
+
+            <div class="map-box">
+
+                <iframe
+                    src="https://maps.google.com/maps?q=Nandanvan%20Canal%20Road,%20Nagpur&t=&z=15&ie=UTF8&iwloc=&output=embed">
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Contact End -->
+
+    <!-- Footer Start -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-grid">
+
+                <!-- LEFT SIDE -->
+                <div class="footer-col">
+
+                    <div class="footer-brand">
+                        <img src="img/eps_logo.png" alt="Epsilon Logo">
+                        <h2 class="footer-logo">
+                            EPSILON <span>CODER'S HUB</span>
+                        </h2>
+                    </div>
+
+                    <p class="footer-desc">
+                        Empowering students with practical coding skills,
+                        live projects, industry-focused training and career
+                        guidance to become future-ready IT professionals.
+                    </p>
+
+                    <div class="social-icons">
+
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/epsiloncoding/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/mehul-ghiya-6b722b58/">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+
+                        <a href="https://www.youtube.com/@Mehulsi" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT SIDE -->
+
+                <div class="footer-col">
+
+                    <h3 class="footer-title">
+                        Get In Touch
+                    </h3>
+
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Nandanvan Canal Road, Nagpur</span>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+91 7709799654</span>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@epsiloncodershub.com</span>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Mon - Sat | 10 AM - 9 PM</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                © 2026 Epsilon Coder's Hub | Learn • Build • Succeed
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init("o3nPOhz1ZhykbARgc");
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const form = document.getElementById("contactForm");
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                emailjs.send("service_nqpjxmi", "template_n8cugsi", {
+                    from_name: document.querySelector("[placeholder='Your Name']").value,
+                    from_email: document.querySelector("[placeholder='Your Email']").value,
+                    subject: document.querySelector("[placeholder='Subject']").value,
+                    message: document.querySelector("[placeholder='Message']").value
+                })
+
+                    .then(function (response) {
+                        console.log("SUCCESS:", response);
+                        alert("✅ Message sent successfully!");
+                        form.reset();
+                    })
+
+                    .catch(function (error) {
+                        console.log("FAILED:", error);
+                        alert("❌ Failed to send message!");
+                    });
+
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
