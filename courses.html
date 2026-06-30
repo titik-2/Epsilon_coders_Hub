@@ -8,6 +8,7 @@
   <meta content="" name="keywords">
   <meta content="" name="description">
   <link rel="stylesheet" href="courses.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
   <!-- Favicon -->
   <link href="img/favicon.ico" rel="icon">
 
@@ -85,7 +86,7 @@
 
     .tech-stack-section {
       padding: 60px 0;
-      background: transparent;
+      background: #131E35;
       overflow: hidden;
     }
 
@@ -312,6 +313,35 @@
       text-decoration: none;
     }
 
+    .social-icons a {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 16px;
+      transition: .3s ease;
+    }
+
+    /* Brand Backgrounds */
+    .social-icons .android {
+      background: #3DDC84;
+    }
+
+    .social-icons .instagram {
+      background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+    }
+
+    .social-icons .linkedin {
+      background: #0A66C2;
+    }
+
+    .social-icons .youtube {
+      background: #FF0000;
+    }
+
     .social-icons a:hover {
       background: #63F2F4;
       color: #0B0F17;
@@ -367,7 +397,7 @@
     }
 
     .footer-brand img {
-      height: 55px;
+      height: 100px;
       width: auto;
     }
 
@@ -791,14 +821,132 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* =========================
+   TOP CONTACT STRIP
+========================= */
+
+    .topbar {
+      background: linear-gradient(135deg, rgba(99, 242, 244, .08), rgba(59, 130, 246, .08));
+      border-bottom: 1px solid rgba(99, 242, 244, .15);
+      padding: 8px 0;
+    }
+
+    .topbar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      padding: 0 15px;
+    }
+
+    .topbar-item {
+      color: #94a3b8;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: .3s;
+    }
+
+    .topbar-item i {
+      color: #63F2F4;
+      font-size: 12px;
+    }
+
+    .topbar-item:hover {
+      color: #63F2F4;
+    }
+
+    .topbar-divider {
+      width: 1px;
+      height: 14px;
+      background: rgba(255, 255, 255, .15);
+    }
+
+    @media (max-width: 500px) {
+      .topbar-inner {
+        gap: 10px;
+      }
+
+      .topbar-item {
+        font-size: 11.5px;
+      }
+    }
+
+    /* ==========================
+   991px — MOBILE MENU FIX
+========================== */
+
+    @media (max-width: 991px) {
+
+      .navbar {
+        height: auto;
+      }
+
+      .navbar-brand {
+        max-width: 70%;
+      }
+
+      .navbar-toggler {
+        margin-left: auto;
+      }
+
+      .navbar .container-fluid {
+        flex-wrap: wrap;
+      }
+
+      .navbar-collapse {
+        width: 100%;
+        flex-basis: 100%;
+        order: 3;
+        margin-top: 12px;
+      }
+
+      .navbar-nav.mx-auto {
+        margin: 0 !important;
+        width: 100%;
+      }
+    }
+
+    .discount {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(0, 0, 0, .65);
+      color: #facc15;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
   </style>
 </head>
 
 <body>
+  <!-- TOP CONTACT STRIP -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a href="mailto:info@epsiloncodershub.com" class="topbar-item">
+        <i class="fas fa-envelope"></i> epsiloncoderhub@gmail.com
+      </a>
+      <span class="topbar-divider"></span>
+      <a href="tel:+917709799654" class="topbar-item">
+        <i class="fas fa-phone-alt"></i> +91 7709799654
+      </a>
+    </div>
+  </div>
+
   <!-- Spinner Start -->
   <div id="spinner"
-    class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-    <div class="spinner-border text-primary spinner-border-custom" role="status">
+    class="show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    style="background:#0B0F17;">
+    <div class="spinner-border text-info" role="status">
       <span class="sr-only">Loading...</span>
     </div>
   </div>
@@ -972,10 +1120,10 @@
     <div class="course-grid">
 
       <!-- 1)c & c++ card -->
-      <div class="course-card">
+      <div class="course-card" data-aos="zoom-in">
         <div class="course-image">
           <img src="img/Crs-1.jpg" alt="C & C++ Programming">
-          <div class="badge-best">BESTSELLER</div>
+          <div class="discount">GET 50% OFF</div>
           <div class="badge-rating">★ 4.8</div>
         </div>
         <div class="course-body">
@@ -988,7 +1136,7 @@
         'C &amp; C++ Programming',
         'Learn C fundamentals, C++ OOP, Data Structures, and problem-solving with real-world coding practice',
         '3 Months',
-        '₹2999',
+       
         'C Basics (syntax, loops, functions, arrays), Pointers, Memory Management, Structures, C++ OOP (classes, objects, inheritance, polymorphism), STL basics, Problem Solving, DSA fundamentals, Mini Projects',
         'Software Developer, C/C++ Programmer, Backend Developer, Game Developer (Basics), Problem Solving Engineer'
       )">Details</a>
@@ -997,10 +1145,10 @@
       </div>
 
       <!-- CARD 2 python-->
-      <div class="course-card">
+      <div class="course-card" data-aos="zoom-in">
         <div class="course-image">
           <img src="img/Crs-4.webp" alt="Python AI / ML">
-          <div class="badge-best">BESTSELLER</div>
+          <div class="discount">GET 50% OFF</div>
           <div class="badge-rating">★ 4.9</div>
 
         </div>
@@ -1015,7 +1163,7 @@
         'Python AI / ML Development',
         'Python, Artificial Intelligence, Machine Learning, Data Science with real-world projects',
         '6 Months',
-        '₹9999',
+        
         'Python Programming, Data Analysis, NumPy, Pandas, Data Visualization, Machine Learning, Deep Learning Basics, AI Concepts, Model Building, Project Development, Deployment',
         'Python Developer, AI Engineer, Machine Learning Engineer, Data Analyst, Data Scientist, AI Research Assistant, Freelancer'
       )">Details</a>
@@ -1024,10 +1172,10 @@
       </div>
 
       <!-- CARD 2 — java -->
-      <div class="course-card">
+      <div class="course-card" data-aos="zoom-in">
         <div class="course-image">
           <img src="img/javaprogramming.jpg" alt="Java Programming">
-          <div class="badge-best">BESTSELLER</div>
+          <div class="discount">GET 50% OFF</div>
           <div class="badge-rating">★ 4.8</div>
 
         </div>
@@ -1041,7 +1189,7 @@
         'Java Programming',
         'Core Java, Object-Oriented Programming, Spring Boot, and real-world backend projects',
         '4 Months',
-        '₹5999',
+       
         'Java Basics, OOP Concepts, Exception Handling, Collections Framework, File I/O, JDBC, Multithreading, Spring Boot, REST APIs, Maven, Git & GitHub, Mini Projects',
         'Java Developer, Backend Developer, Software Engineer, Android Developer (Basics), Full Stack Developer, Freelancer'
       )">Details</a>
@@ -1049,10 +1197,10 @@
         </div>
       </div>
       <!-- CARD 4full stack  -->
-      <div class="course-card">
+      <div class="course-card" data-aos="zoom-in">
         <div class="course-image">
           <img src="img/Crs-8.jpeg" alt="Full Stack Java">
-          <div class="badge-best">BESTSELLER</div>
+          <div class="discount">GET 50% OFF</div>
           <div class="badge-rating">★ 4.9</div>
 
         </div>
@@ -1076,10 +1224,10 @@
       </div>
 
       <!-- card 5 python full stack -->
-      <div class="course-card">
+      <div class="course-card" data-aos="zoom-in">
         <div class="course-image">
           <img src="img/pythonfullstack.jpg" alt="Python Full Stack">
-          <div class="badge-best">BESTSELLER</div>
+          <div class="discount">GET 50% OFF</div>
           <div class="badge-rating">★ 4.9</div>
 
         </div>
@@ -1093,7 +1241,7 @@
         'Python Full Stack Development',
         'Python, Django, React, PostgreSQL with industry-level real-world projects',
         '6 Months',
-        '₹8999',
+        
         'Python Basics, OOP, Django Framework, Django REST Framework, PostgreSQL, React.js, HTML & CSS, REST APIs, Authentication, Git & GitHub, Deployment, Real-World Projects, Portfolio Building',
         'Python Developer, Full Stack Developer, Backend Developer, Django Developer, Web Application Developer, Freelancer'
       )">Details</a>
@@ -1102,10 +1250,10 @@
       </div>
 
       <!-- CARD 6: MERN Stack -->
-      <div class="course-card">
+      <div class="course-card" data-aos="zoom-in">
         <div class="course-image">
           <img src="img/crs-12.jpeg" alt="MERN Stack Development">
-          <div class="badge-best">BESTSELLER</div>
+          <div class="discount">GET 50% OFF</div>
           <div class="badge-rating">★ 4.9</div>
 
         </div>
@@ -1120,7 +1268,7 @@
         'MERN Stack Development',
         'MongoDB, Express.js, React.js, Node.js with real-world projects',
         '6 Months',
-        '₹8999',
+        
         'MongoDB, Express.js, React.js, Node.js, REST APIs, Authentication &amp; Authorization, Database Management, Redux, JWT, CRUD Operations, Git &amp; GitHub, Deployment, Real-World Projects, Portfolio Building',
         'MERN Stack Developer, Full Stack Developer, Backend Developer, Frontend Developer, Web Application Developer, Freelancer'
       )">Details</a>
@@ -1128,10 +1276,10 @@
         </div>
       </div>
       <!-- card 7 SQL -->
-      <div class="course-card">
+      <div class="course-card" data-aos="zoom-in">
         <div class="course-image">
           <img src="img/Crs-10.jpeg" alt="SQL & Database Management">
-          <div class="badge-best">TRENDING</div>
+          <div class="discount">GET 50% OFF</div>
           <div class="badge-rating">★ 4.7</div>
 
         </div>
@@ -1145,7 +1293,7 @@
         'SQL &amp; Database Management',
         'Learn SQL from basics to advanced with real database querying and hands-on practice',
         '1.5 Months',
-        '₹1999',
+       
         'SQL Basics (SELECT, INSERT, UPDATE, DELETE), Filtering &amp; Sorting, Joins (INNER, LEFT, RIGHT), Group By &amp; Aggregations, Subqueries, Indexing Basics, Database Design, MySQL/PostgreSQL Practice, Real-World Queries',
         'Database Developer, SQL Developer, Backend Support Engineer, Data Analyst (Basic), Software Developer'
       )">Details</a>
@@ -1153,11 +1301,93 @@
         </div>
       </div>
 
+
+      <!-- ===================== DATA ANALYTICS ===================== -->
+
+      <div class="course-card" data-aos="zoom-in">
+        <div class="course-image">
+          <img src="img/dataanalytics.webp" alt="Data Analytics">
+          <div class="discount">GET 50% OFF</div>
+          <div class="badge-rating">★ 4.9</div>
+        </div>
+
+
+        <div class="course-body">
+          <div class="course-title">Data Analytics</div>
+          <div class="course-desc">Master data analysis using Excel, SQL, Python & Power BI</div>
+
+          <div class="btn-row">
+            <a href="javascript:void(0)" class="btn enroll" onclick="openEnrollModal('Data Analytics')">Enroll</a>
+
+            <a href="#" class="btn details"
+              onclick="openDetailsModal('Data Analytics','Master data analysis, visualization, SQL, Python, Excel and Power BI through hands-on projects and real business datasets.','4 Months','MS Excel, Advanced Excel, SQL, Python for Data Analysis, Pandas, NumPy, Data Cleaning, Data Visualization, Statistics, Power BI Dashboards, Real Projects','Data Analyst, Business Analyst, BI Analyst, Reporting Analyst, Data Visualization Specialist')">
+              Details
+            </a>
+          </div>
+        </div>
+
+
+      </div>
+
+      <!-- ===================== ADVANCED EXCEL ===================== -->
+
+      <div class="course-card" data-aos="zoom-in">
+        <div class="course-image">
+          <img src="img/excel.jpg" alt="Advanced Excel">
+          <div class="discount">GET 50% OFF</div>
+          <div class="badge-rating">★ 4.8</div>
+        </div>
+
+
+        <div class="course-body">
+          <div class="course-title">Advanced Excel</div>
+          <div class="course-desc">Become an Excel expert with real business applications</div>
+
+          <div class="btn-row">
+            <a href="javascript:void(0)" class="btn enroll" onclick="openEnrollModal('Advanced Excel')">Enroll</a>
+
+            <a href="#" class="btn details"
+              onclick="openDetailsModal('Advanced Excel','Learn Advanced Excel from basics to professional level with practical business reports and automation techniques.','2 Months','Excel Functions, Lookup Functions, Pivot Tables, Pivot Charts, Conditional Formatting, Dashboards, Data Validation, What-If Analysis, Macros, VBA Basics, MIS Reporting','MIS Executive, Data Analyst, Office Executive, Business Analyst, Reporting Professional')">
+              Details
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ===================== POWER BI ===================== -->
+
+      <div class="course-card" data-aos="zoom-in">
+        <div class="course-image">
+          <img src="img/powerbi.jpg" alt="Power BI">
+          <div class="discount">GET 50% OFF</div>
+          <div class="badge-rating">★ 4.9</div>
+        </div>
+
+
+        <div class="course-body">
+          <div class="course-title">Power BI</div>
+          <div class="course-desc">Build interactive dashboards and business intelligence reports</div>
+
+          <div class="btn-row">
+            <a href="javascript:void(0)" class="btn enroll" onclick="openEnrollModal('Power BI')">Enroll</a>
+
+            <a href="#" class="btn details"
+              onclick="openDetailsModal('Power BI','Learn Microsoft Power BI to create professional dashboards, reports and business intelligence solutions with real-world datasets.','2 Months','Power BI Desktop, Data Import, Data Cleaning, Power Query, Data Modeling, DAX Functions, Charts, KPI Dashboards, Report Publishing, Power BI Service, Real Business Projects','Power BI Developer, BI Analyst, Data Analyst, Dashboard Developer, Business Intelligence Consultant')">
+              Details
+            </a>
+          </div>
+        </div>
+
+
+      </div>
+
+
       <!-- CARD 8: BCA / MCA / BSc IT -->
-      <div class="course-card">
+      <div class="course-card" data-aos="zoom-in">
         <div class="course-image">
           <img src="img/Crs-13.jpeg" alt="BCA / MCA / BSc IT">
-          <div class="badge-best">POPULAR</div>
+          <div class="discount">GET 50% OFF</div>
           <div class="badge-rating">★ 4.9</div>
 
         </div>
@@ -1172,7 +1402,7 @@
         'BCA / MCA / BSc IT Career Development Program',
         'Comprehensive academic and industry-oriented training designed for BCA, MCA, and BSc IT students to strengthen technical skills and improve career opportunities',
         '1 Year',
-        '₹9999',
+        
         'C Programming, C++, Java, Python, DBMS, SQL, Data Structures, Operating Systems, Computer Networks, HTML, CSS, JavaScript, Web Development, Academic Projects, Major Projects, Practical Lab Support, Viva Preparation, Interview Preparation, Resume Building',
         'Software Developer, Full Stack Developer, Java Developer, Python Developer, Web Developer, Database Developer, System Analyst, IT Professional'
       )">Details</a>
@@ -1180,10 +1410,10 @@
         </div>
       </div>
       <!-- CARD 9: BCCA -->
-      <div class="course-card">
+      <div class="course-card" data-aos="zoom-in">
         <div class="course-image">
           <img src="img/Crs-14.jpeg" alt="BCCA">
-          <div class="badge-best">POPULAR</div>
+          <div class="discount">GET 50% OFF</div>
           <div class="badge-rating">★ 4.8</div>
 
         </div>
@@ -1198,7 +1428,7 @@
         'BCCA Professional Training Program',
         'Complete academic and practical training specially designed for BCCA students to strengthen programming, project development, and industry-ready skills',
         '1 Year',
-        '₹9999',
+        
         'C Programming, C++, Java, Python, DBMS, SQL, Data Structures, Web Development, Mini Projects, Major Projects, Practical Lab Support, Viva Preparation, Academic Guidance, Interview Preparation, Resume Building',
         'Software Developer, Java Developer, Python Developer, Web Developer, Full Stack Developer, Database Developer, Freelancer'
       )">Details</a>
@@ -1246,21 +1476,20 @@
 
           <div class="social-icons">
 
-            <a href="#" title="Facebook">
-              <i class="fab fa-facebook-f"></i>
+            <a href="https://bueduw.on-app.in/app/home?orgCode=bueduw&referrer=utm_source=whatsapp&utm_medium=tutor-app-referral"
+              class="android" target="_blank">
+              <i class="fab fa-android"></i>
             </a>
 
-            <a href="https://www.instagram.com/epsiloncoding/" target="_blank" rel="noopener noreferrer"
-              title="Instagram">
+            <a href="https://www.instagram.com/epsiloncoding/" class="instagram" target="_blank">
               <i class="fab fa-instagram"></i>
             </a>
 
-            <a href="https://www.linkedin.com/in/mehul-ghiya-6b722b58/" target="_blank" rel="noopener noreferrer"
-              title="LinkedIn">
+            <a href="https://www.linkedin.com/in/mehul-ghiya-6b722b58/" class="linkedin" target="_blank">
               <i class="fab fa-linkedin-in"></i>
             </a>
 
-            <a href="https://www.youtube.com/@Mehulsi" target="_blank" rel="noopener noreferrer" title="YouTube">
+            <a href="https://www.youtube.com/@Mehulsi" class="youtube" target="_blank">
               <i class="fab fa-youtube"></i>
             </a>
 
@@ -1288,7 +1517,7 @@
 
           <div class="contact-item">
             <i class="fas fa-envelope"></i>
-            <span>info@epsiloncodershub.com</span>
+            <span>epsiloncoderhub@gmail.com</span>
           </div>
 
           <div class="contact-item">
@@ -1441,7 +1670,7 @@
       document.getElementById("modalCourseTitle").innerText = title;
       document.getElementById("modalCourseDesc").innerText = description;
       document.getElementById("modalDuration").innerText = duration;
-      document.getElementById("modalFees").innerText = fees;
+      // document.getElementById("modalFees").innerText = fees;
       document.getElementById("modalTopics").innerText = topics;
       document.getElementById("modalCareer").innerText = career;
 
@@ -1469,8 +1698,8 @@
       <h4>Duration</h4>
       <p id="modalDuration"></p>
 
-      <h4>Fees</h4>
-      <p id="modalFees"></p>
+      <!-- <h4>Fees</h4>
+      <p id="modalFees"></p> -->
 
       <h4>What You Will Learn</h4>
       <p id="modalTopics"></p>
@@ -1497,6 +1726,15 @@
     });
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: "ease-in-out",
+      once: true
+    });
+  </script>
 </body>
 
 </html>

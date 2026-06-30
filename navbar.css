@@ -1,292 +1,241 @@
-/* =========================
-   EPSILON NAVBAR
-========================= */
-
+/* ─── NAVBAR BASE ─────────────────────────────────────────── */
 .navbar {
-    background: rgba(11, 15, 23, 0.95);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, .25);
-    height: 75px;
-    padding: 0;
-    z-index: 999;
+  background: rgba(11, 15, 26, 0.92);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(0, 229, 255, 0.08);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(0, 229, 255, 0.06);
+  height: 75px;
+  padding: 0;
+  z-index: 999;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* LOGO */
-
+/* ─── BRAND ───────────────────────────────────────────────── */
 .navbar-brand {
-    display: flex;
-    align-items: center;
-    height: 75px;
+  display: flex;
+  align-items: center;
+  height: 75px;
+  gap: 10px;
 }
 
 .navbar-brand img {
-    height: 90px;
-    width: auto;
-    margin-top: -8px;
-    margin-bottom: -8px;
+  height: 90px;
+  width: auto;
+  margin-top: -8px;
+  margin-bottom: -8px;
+  filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.2));
 }
 
 .navbar-brand span {
-    font-size: 20px;
-    font-weight: 700;
-    color: #fff;
-    letter-spacing: .5px;
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.4px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .navbar-brand span span {
-    color: #63F2F4 !important;
+  background: linear-gradient(135deg, #00e5ff, #009dff) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
 }
 
-/* Links */
-
+/* ─── NAV LINKS ───────────────────────────────────────────── */
 .navbar-nav {
-    gap: 20px;
+  gap: 4px;
 }
 
 .navbar-nav .nav-link {
-    color: #dbe4ee !important;
-    font-size: 15px;
-    font-weight: 500;
-    position: relative;
-    transition: .3s;
+  color: #c5d0e0 !important;
+  font-size: 14.5px;
+  font-weight: 500;
+  padding: 6px 12px !important;
+  border-radius: 8px;
+  position: relative;
+  transition: color 0.25s ease, background 0.25s ease;
+  letter-spacing: 0.2px;
 }
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-    color: #63F2F4 !important;
+  color: #00e5ff !important;
+  background: rgba(0, 229, 255, 0.07);
 }
 
 .navbar-nav .nav-link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0;
-    height: 2px;
-    background: #63F2F4;
-    transition: .3s;
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 2px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  border-radius: 99px;
+  background: linear-gradient(90deg, #00e5ff, #009dff);
+  transition: width 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover::after,
 .navbar-nav .nav-link.active::after {
-    width: 100%;
+  width: calc(100% - 24px);
 }
 
-/* Button */
-
+/* ─── ENROLL BUTTON ───────────────────────────────────────── */
 .enroll-btn {
-    background: #63F2F4;
-    color: #0B0F17;
-    padding: 8px 18px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: .3s;
+  background: linear-gradient(135deg, #00e5ff, #009dff);
+  color: #0b0f1a !important;
+  padding: 9px 22px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  box-shadow: 0 4px 18px rgba(0, 229, 255, 0.28);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+  white-space: nowrap;
+  display: inline-block;
 }
 
 .enroll-btn:hover {
-    transform: translateY(-2px);
-    color: #0B0F17;
-    box-shadow: 0 0 20px rgba(99, 242, 244, .4);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 28px rgba(0, 229, 255, 0.45);
+  opacity: 0.92;
+  color: #0b0f1a !important;
 }
 
-/* Toggle Button */
+.enroll-btn:active {
+  transform: translateY(0) scale(0.98);
+}
 
+/* ─── TOGGLER ─────────────────────────────────────────────── */
 .navbar-toggler {
-    border: 1px solid #63F2F4;
-    padding: 6px 10px;
+  border: 1px solid rgba(0, 229, 255, 0.2) !important;
+  border-radius: 10px !important;
+  padding: 7px 10px;
+  background: rgba(0, 229, 255, 0.05);
+  margin-left: auto;
+  transition: background 0.2s ease, border-color 0.2s ease;
 }
 
 .navbar-toggler:focus {
-    box-shadow: none;
+  box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.15) !important;
 }
 
-/* Cyan Hamburger */
+.navbar-toggler:hover {
+  background: rgba(0, 229, 255, 0.1);
+  border-color: rgba(0, 229, 255, 0.4) !important;
+}
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(99,242,244,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("img/menu-new.png");
 }
 
+/* ─── LAYOUT ──────────────────────────────────────────────── */
 .navbar .container-fluid {
-    flex-wrap: nowrap;
-}
-
-.navbar-toggler {
-    margin-left: auto;
+  flex-wrap: nowrap;
 }
 
 .navbar-collapse {
-    flex-basis: 100%;
+  flex-basis: 100%;
 }
 
-/* ==========================
-   1280px
-========================== */
-
+/* ─── 1280px ──────────────────────────────────────────────── */
 @media (max-width: 1280px) {
-
-    .navbar-brand img {
-        height: 85px;
-    }
-
-    .navbar-brand span {
-        font-size: 18px;
-    }
-
-    .navbar-nav {
-        gap: 15px;
-    }
-
-    .navbar-nav .nav-link {
-        font-size: 14px;
-    }
+  .navbar-brand img  { height: 85px; }
+  .navbar-brand span { font-size: 18px; }
+  .navbar-nav        { gap: 2px; }
+  .navbar-nav .nav-link { font-size: 14px; }
 }
 
-/* ==========================
-   1024px
-========================== */
-
+/* ─── 1024px ──────────────────────────────────────────────── */
 @media (max-width: 1024px) {
-
-    .navbar {
-        height: 70px;
-    }
-
-    .navbar-brand {
-        height: 70px;
-    }
-
-    .navbar-brand img {
-        height: 80px;
-    }
-
-    .navbar-brand span {
-        font-size: 17px;
-    }
-
-    .navbar-nav {
-        gap: 12px;
-    }
-
-    .navbar-nav .nav-link {
-        font-size: 14px;
-    }
-
-    .enroll-btn {
-        padding: 8px 16px;
-        font-size: 14px;
-    }
+  .navbar,
+  .navbar-brand { height: 70px; }
+  .navbar-brand img  { height: 80px; }
+  .navbar-brand span { font-size: 17px; }
+  .navbar-nav        { gap: 2px; }
+  .navbar-nav .nav-link { font-size: 13.5px; }
+  .enroll-btn { padding: 8px 18px; font-size: 13px; }
 }
 
-/* ==========================
-   800px
-========================== */
-
-@media (max-width: 800px) {
-
-    .navbar {
-        height: auto;
-        padding: 10px 0;
-    }
-
-    .navbar-brand {
-        height: auto;
-    }
-
-    .navbar-brand img {
-        height: 70px;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
-    .navbar-brand span {
-        font-size: 16px;
-    }
-
-    .navbar-collapse {
-        background: #121a2a;
-        margin-top: 12px;
-        border-radius: 15px;
-        padding: 15px;
-        border: 1px solid rgba(99, 242, 244, .15);
-    }
-
-    .navbar-nav {
-        gap: 8px;
-        text-align: center;
-    }
-
-    .navbar-nav .nav-link {
-        padding: 10px 0;
-        font-size: 15px;
-    }
-
-    .navbar-nav .nav-link::after {
-        display: none;
-    }
-
-    .enroll-btn {
-        display: block;
-        width: 100%;
-        text-align: center;
-        margin-top: 10px;
-    }
-}
-
-/* ==========================
-   500px
-========================== */
-
-@media (max-width: 500px) {
-
-    .navbar {
-        padding: 8px 0;
-    }
-
-    .navbar-brand img {
-        height: 60px;
-    }
-
-    .navbar-brand span {
-        font-size: 14px;
-        letter-spacing: 0;
-    }
-
-    .navbar-toggler {
-        padding: 5px 8px;
-    }
-
-    .navbar-collapse {
-        padding: 12px;
-        border-radius: 12px;
-    }
-
-    .navbar-nav .nav-link {
-        font-size: 14px;
-        padding: 8px 0;
-    }
-
-    .enroll-btn {
-        width: 100%;
-        padding: 10px;
-        font-size: 14px;
-        margin-top: 8px;
-    }
-}
-
-/* MOBILE FIX */
-
+/* ─── 991px — mobile menu ─────────────────────────────────── */
 @media (max-width: 991px) {
+  .navbar { height: auto; }
 
-    .navbar {
-        height: auto;
-    }
+  .navbar-brand { max-width: 70%; }
 
-    .navbar-brand {
-        max-width: 70%;
-    }
+  .navbar .container-fluid { flex-wrap: wrap; }
 
-    .navbar-toggler {
-        margin-left: auto;
-    }
+  .navbar-collapse {
+    width: 100%;
+    flex-basis: 100%;
+    order: 3;
+    margin-top: 10px;
+    background: rgba(13, 18, 32, 0.98);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    padding: 16px;
+    border: 1px solid rgba(0, 229, 255, 0.12);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 229, 255, 0.05);
+  }
+
+  .navbar-nav.mx-auto {
+    margin: 0 !important;
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px 14px !important;
+    border-radius: 10px;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(0, 229, 255, 0.06);
+  }
+
+  .navbar-nav .nav-link:last-of-type {
+    border-bottom: none;
+  }
+
+  .navbar-nav .nav-link::after { display: none; }
+
+  .enroll-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 12px;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 12px;
+  }
+}
+
+/* ─── 800px ───────────────────────────────────────────────── */
+@media (max-width: 800px) {
+  .navbar { padding: 10px 0; }
+  .navbar-brand { height: auto; }
+  .navbar-brand img  { height: 70px; margin: 0; }
+  .navbar-brand span { font-size: 16px; }
+}
+
+/* ─── 500px ───────────────────────────────────────────────── */
+@media (max-width: 500px) {
+  .navbar { padding: 8px 0; }
+  .navbar-brand img  { height: 60px; }
+  .navbar-brand span { font-size: 14px; letter-spacing: 0; }
+  .navbar-toggler    { padding: 5px 8px; }
+
+  .navbar-collapse {
+    padding: 12px;
+    border-radius: 14px;
+  }
+
+  .navbar-nav .nav-link { font-size: 14px; padding: 9px 12px !important; }
+
+  .enroll-btn {
+    padding: 11px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
 }

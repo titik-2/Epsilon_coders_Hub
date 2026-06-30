@@ -1049,3 +1049,425 @@ EPSILON COURSE SECTION
     color:#00e5ff;
     margin-top:20px;
 }
+ .footer {
+            background: #0B0F17;
+            color: #fff;
+            padding: 35px 0 0;
+            margin-top: 60px;
+        }
+
+        .footer-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* GRID */
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            align-items: start;
+            padding-bottom: 25px;
+        }
+
+        /* LOGO */
+
+        .footer-logo {
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .footer-logo span {
+            color: #63F2F4;
+        }
+
+        /* DESCRIPTION */
+
+        .footer-desc {
+            color: #94a3b8;
+            font-size: 14px;
+            line-height: 1.7;
+            max-width: 500px;
+            margin-bottom: 18px;
+        }
+
+        /* TITLE */
+
+        .footer-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 18px;
+            color: #fff;
+        }
+@media(max-width:500px){
+
+.footer-brand{
+    gap:10px;
+}
+
+.footer-brand img{
+    width:55px;
+}
+
+.footer-logo .line1,
+.footer-logo .line2{
+    font-size:22px;
+}
+
+}
+        /* =========================
+   OUR TEAM SECTION
+========================= */
+
+
+
+.team-section{
+    padding:80px 0;
+    background:#0B0F17;
+    overflow:hidden;
+}
+
+.team-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.team-title h2{
+    color:#fff;
+    font-size:2.4rem;
+    font-weight:800;
+    margin-bottom:8px;
+}
+
+.team-title p{
+    color:#9ca3af;
+    font-size:15px;
+}
+
+/*==========================
+    SLIDER
+==========================*/
+
+.team-grid{
+    position:relative;
+}
+
+.team-grid .owl-stage{
+    display:flex;
+    align-items:stretch;
+}
+
+.team-grid .owl-item{
+    display:flex;
+}
+
+.team-grid .owl-item .team-item{
+    width:100%;
+}
+
+/*==========================
+    CARD
+==========================*/
+
+.team-item{
+
+    background:#121826;
+
+    border-radius:22px;
+
+    border:1px solid rgba(99,242,244,.12);
+
+    padding:28px 22px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    height:100%;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.team-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:linear-gradient(90deg,#63F2F4,#2563eb);
+
+}
+
+.team-item:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#63F2F4;
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.35),
+    0 0 35px rgba(99,242,244,.15);
+
+}
+
+/*==========================
+    IMAGE
+==========================*/
+
+.team-avatar{
+
+    width:100px;
+    height:100px;
+
+    margin:auto;
+
+    margin-bottom:18px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    border:4px solid rgba(99,242,244,.2);
+
+    transition:.35s;
+}
+
+.team-item:hover .team-avatar{
+
+    border-color:#63F2F4;
+
+    transform:scale(1.05);
+}
+
+.team-avatar img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+.team-avatar-fallback{
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#1f2937;
+
+    color:#63F2F4;
+
+    font-size:34px;
+
+    font-weight:700;
+}
+
+/*==========================
+    TEXT
+==========================*/
+
+.team-badge{
+
+    display:inline-block;
+
+    margin-bottom:14px;
+
+    background:rgba(99,242,244,.1);
+
+    color:#63F2F4;
+
+    padding:6px 14px;
+
+    border-radius:30px;
+
+    font-size:12px;
+
+    font-weight:700;
+}
+
+.team-item h5{
+
+    color:#fff;
+
+    font-size:21px;
+
+    margin-bottom:10px;
+}
+
+.team-desc{
+
+    color:#cbd5e1;
+
+    font-size:14px;
+
+    line-height:1.7;
+}
+
+/*==========================
+    PREMIUM ARROWS
+==========================*/
+
+.team-grid .owl-nav{
+
+    margin-top:30px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+}
+
+.team-grid .owl-nav button{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%!important;
+
+    background:#151d2d!important;
+
+    border:1px solid rgba(99,242,244,.2)!important;
+
+    color:#63F2F4!important;
+
+    font-size:22px!important;
+
+    transition:.3s;
+}
+
+.team-grid .owl-nav button:hover{
+
+    background:#63F2F4!important;
+
+    color:#0B0F17!important;
+
+    transform:translateY(-3px);
+}
+
+/*==========================
+    PREMIUM DOTS
+==========================*/
+
+.team-grid .owl-dots{
+
+    margin-top:18px;
+
+    text-align:center;
+}
+
+.team-grid .owl-dot span{
+
+    width:10px!important;
+
+    height:10px!important;
+
+    background:#475569!important;
+
+    transition:.3s;
+}
+
+.team-grid .owl-dot.active span{
+
+    width:34px!important;
+
+    border-radius:20px;
+
+    background:#63F2F4!important;
+}
+
+/*==========================
+    RESPONSIVE
+==========================*/
+
+@media(max-width:1280px){
+
+.team-item{
+padding:24px 20px;
+}
+
+}
+
+@media(max-width:1024px){
+
+.team-avatar{
+width:90px;
+height:90px;
+}
+
+.team-item h5{
+font-size:19px;
+}
+
+}
+
+@media(max-width:800px){
+
+.team-section{
+padding:60px 0;
+}
+
+.team-item{
+padding:22px 18px;
+}
+
+.team-avatar{
+width:80px;
+height:80px;
+}
+
+.team-grid .owl-nav button{
+
+width:42px;
+height:42px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.team-section{
+padding:45px 0;
+}
+
+.team-title h2{
+font-size:1.8rem;
+}
+
+.team-item{
+padding:20px 16px;
+}
+
+.team-avatar{
+width:75px;
+height:75px;
+}
+
+.team-item h5{
+font-size:18px;
+}
+
+.team-desc{
+font-size:13px;
+}
+
+}

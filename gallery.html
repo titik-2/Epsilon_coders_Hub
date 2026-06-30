@@ -25,9 +25,15 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- navbar.css moved up so it loads BEFORE the page-specific <style> block below,
+         same order used on index.html / about.html / workshop.html / contact.html -->
+    <link rel="stylesheet" href="navbar.css">
     <style>
         body {
-            background: #0b0f17;
+            background: linear-gradient(135deg,
+                    #070B14 0%,
+                    #0F172A 45%,
+                    #16213E 100%);
             color: #eef2ff;
         }
 
@@ -143,23 +149,34 @@
             gap: 10px;
         }
 
+
         .social-icons a {
-            width: 38px;
-            height: 38px;
-
-            border-radius: 10px;
-
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-
-            background: rgba(255, 255, 255, .06);
-
             color: #fff;
+            font-size: 16px;
+            transition: .3s ease;
+        }
 
-            transition: .3s;
+        /* Brand Backgrounds */
+        .social-icons .android {
+            background: #3DDC84;
+        }
 
-            text-decoration: none;
+        .social-icons .instagram {
+            background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+        }
+
+        .social-icons .linkedin {
+            background: #0A66C2;
+        }
+
+        .social-icons .youtube {
+            background: #FF0000;
         }
 
         .social-icons a:hover {
@@ -224,7 +241,7 @@
         }
 
         .footer-brand img {
-            height: 55px;
+            height: 100px;
             width: auto;
         }
 
@@ -497,11 +514,125 @@
                 gap: 18px;
             }
         }
+
+        /* =========================
+   TOP CONTACT STRIP
+========================= */
+
+        .topbar {
+            background: linear-gradient(135deg, rgba(99, 242, 244, .08), rgba(59, 130, 246, .08));
+            border-bottom: 1px solid rgba(99, 242, 244, .15);
+            padding: 8px 0;
+        }
+
+        .topbar-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 18px;
+            flex-wrap: wrap;
+            padding: 0 15px;
+        }
+
+        .topbar-item {
+            color: #94a3b8;
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: .3s;
+        }
+
+        .topbar-item i {
+            color: #63F2F4;
+            font-size: 12px;
+        }
+
+        .topbar-item:hover {
+            color: #63F2F4;
+        }
+
+        .topbar-divider {
+            width: 1px;
+            height: 14px;
+            background: rgba(255, 255, 255, .15);
+        }
+
+        @media (max-width: 500px) {
+            .topbar-inner {
+                gap: 10px;
+            }
+
+            .topbar-item {
+                font-size: 11.5px;
+            }
+        }
+
+        /* ==========================
+   991px — MOBILE MENU FIX
+========================== */
+
+        @media (max-width: 991px) {
+
+            .navbar {
+                height: auto;
+            }
+
+            .navbar-brand {
+                max-width: 70%;
+            }
+
+            .navbar-toggler {
+                margin-left: auto;
+            }
+
+            .navbar .container-fluid {
+                flex-wrap: wrap;
+            }
+
+            .navbar-collapse {
+                width: 100%;
+                flex-basis: 100%;
+                order: 3;
+                margin-top: 12px;
+            }
+
+            .navbar-nav.mx-auto {
+                margin: 0 !important;
+                width: 100%;
+            }
+        }
     </style>
-    <link rel="stylesheet" href="navbar.css">
 </head>
 
 <body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+        style="background:#0B0F17;">
+        <div class="spinner-border text-info" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- TOP CONTACT STRIP -->
+    <div class="topbar">
+        <div class="topbar-inner">
+            <a href="mailto:info@epsiloncodershub.com" class="topbar-item">
+                <i class="fas fa-envelope"></i>epsiloncoderhub@gmail.com
+            </a>
+            <span class="topbar-divider"></span>
+            <a href="tel:+917709799654" class="topbar-item">
+                <i class="fas fa-phone-alt"></i> +91 7709799654
+            </a>
+        </div>
+    </div>
+
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container-fluid d-flex align-items-center">
@@ -691,19 +822,20 @@
 
                     <div class="social-icons">
 
-                        <a href="#">
-                            <i class="fab fa-facebook-f"></i>
+                        <a href="https://bueduw.on-app.in/app/home?orgCode=bueduw&referrer=utm_source=whatsapp&utm_medium=tutor-app-referral"
+                            class="android" target="_blank">
+                            <i class="fab fa-android"></i>
                         </a>
 
-                        <a href="https://www.instagram.com/epsiloncoding/" target="_blank">
+                        <a href="https://www.instagram.com/epsiloncoding/" class="instagram" target="_blank">
                             <i class="fab fa-instagram"></i>
                         </a>
 
-                        <a href="https://www.linkedin.com/in/mehul-ghiya-6b722b58/">
+                        <a href="https://www.linkedin.com/in/mehul-ghiya-6b722b58/" class="linkedin" target="_blank">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
 
-                        <a href="https://www.youtube.com/@Mehulsi" target="_blank">
+                        <a href="https://www.youtube.com/@Mehulsi" class="youtube" target="_blank">
                             <i class="fab fa-youtube"></i>
                         </a>
 
@@ -731,7 +863,7 @@
 
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <span>info@epsiloncodershub.com</span>
+                        <span>epsiloncoderhub@gmail.com</span>
                     </div>
 
                     <div class="contact-item">
